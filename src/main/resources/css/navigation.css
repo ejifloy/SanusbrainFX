@@ -21,7 +21,7 @@
 #custom-sidebar-toggle-button{
     -fx-background-color:transparent;
     -fx-background-radius:10;
-    -fx-background-insets: 2 8;
+    -fx-background-insets: 4 8;
     -fx-border-color: transparent;
     -fx-border-width: 0 0 0 2;
     -fx-border-radius:0;
@@ -62,7 +62,7 @@
 **************************************************/
 
 .mfx-font-icon{
-    -mfx-size: 22;
+    -mfx-size: 20;
     -fx-translate-x: -1;
     -fx-opacity: 0.75;
 }
