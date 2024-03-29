@@ -1,0 +1,63 @@
+/*******************************************************************************
+* Anchor-Pane, Border-Pane, Pane...                                            *
+*******************************************************************************/
+
+.radius{
+    -fx-background-radius: 4px;
+}
+
+.radius-half{
+    -fx-background-radius: 4px 4px 0px 0px;
+}
+
+/*******************************************************************************
+* MFX Text-field, Password-field                                               *
+*******************************************************************************/
+
+#custom-login {
+    -fx-background-color: #237192;
+    -fx-text-fill: #fff;
+    -fx-font-size:16;
+}
+
+#custom-login .mfx-ripple-generator {
+    -mfx-ripple-color: #35AADC;
+    -mfx-auto-clip: true;
+}
+
+custom-login: hover,
+custom-login: focused{
+    -fx-background-color: #35AADC;
+}
+
+custom-login: pressed{
+    -fx-background-color: #2C8DB7;
+}
+
+#custom-link-btn{
+    -fx-background-color: transparent;
+    -fx-background-radius: 14px;
+    -fx-border-radius: 14px;
+    -fx-text-fill: #65768b;
+}
+
+#custom-link-btn:hover,
+#custom-link-btn:focused {
+	-fx-border-color: #35aadc;
+	-fx-text-fill: #35aadc;
+}
+
+#custom-link-btn .mfx-ripple-generator {
+	-mfx-ripple-color: #35aadc;
+	-mfx-auto-clip: true;
+}
+
+/*******************************************************************************
+* MFXFontIcon                                                                  *
+*******************************************************************************/
+
+.error-icon{
+    -mfx-description: "fas-triangle-exclamation";
+    -mfx-color: #D34336;
+    -mfx-size: 1em;
+}

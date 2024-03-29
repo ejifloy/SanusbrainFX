@@ -1,0 +1,167 @@
+/*******************************************************************************
+* Anchor-Pane, Border-Pane, Pane...                                            *
+*******************************************************************************/
+
+.logo{
+    -fx-image: url("Images/SANUSBRAIN_LOGO_dark.png");
+}
+
+.rootPane {
+	-fx-background-color: #202020;
+	-fx-background-radius: 6;
+	-fx-border-radius: 6;
+	-fx-border-width:0;
+}
+
+.bg{
+    -fx-background-color: #202020;
+}
+
+.label{
+    -fx-text-fill: #65768b;
+}
+
+.error-label{
+    -fx-text-fill: #D34336;
+}
+
+.text{
+    -fx-text-fill: #65768b;
+}
+
+/*******************************************************************************
+* MFX Text-field, Password-field, TextArea                                     *
+*******************************************************************************/
+
+#custom-text-field,
+#custom-password-field{
+    -fx-background-color: #2d2d2d;
+    -fx-background-radius: 4px;
+
+    -fx-border-radius: 4px;
+    -fx-border-style: solid;
+    -fx-border-color: #65768b;
+
+    -fx-text-fill: #f5f5f5;
+    -fx-font-size: 13;
+}
+
+#custom-text-field:focus-within,
+#custom-password-field:focus-within{
+    -fx-text-fill: #f1f1f1;
+    -fx-background-color: #323232;
+    -fx-border-color: #35aadc;
+}
+
+#custom-text-field .text-field,
+#custom-password-field .text-field{
+    -fx-highlight-fill: #35aadc;
+    -fx-text-fill: #f5f5f5;
+}
+
+#custom-text-field .floating-text,
+#custom-password-field .floating-text{
+    -fx-text-fill: #9a9a9a;
+    -fx-background-color: #2d2d2d;
+}
+
+#custom-text-field:floating .floating-text,
+#custom-password-field:floating .floating-text{
+    -fx-text-fill: #65768b;
+    -fx-background-insets: 5 0 0 0;
+    -fx-background-radius: 2;
+    -fx-padding: 0 4 0 4;
+    -fx-translate-y: 2;
+}
+
+#custom-text-field:focus-within .floating-text,
+#custom-password-field:focus-within .floating-text{
+    -fx-text-fill: #35aadc;
+    -fx-background-color:#323232;
+}
+
+#custom-password-field .mfx-font-icon{
+    -mfx-color: #9a9a9a;
+}
+
+#custom-password-field .mfx-font-icon:hover,
+#custom-password-field:focus-within .mfx-font-icon{
+    -mfx-color: #35aadc;
+}
+
+/*******************************************************************************
+* MFX CheckBox                                                                 *
+*******************************************************************************/
+
+#custom-checkbox {
+	-mfx-main: #35aadc;
+	-fx-text-fill: #9a9a9a;
+}
+
+#custom-checkbox .box{
+    -fx-border-radius:3px;
+    -fx-border-width:1px;
+    -fx-border-color: #65768b;
+    -fx-background-color: #2d2d2d;
+}
+
+#custom-checkbox .box .mark{
+	-mfx-description: "fas-check";
+	-mfx-size:16px;
+	-mfx-color: #fff;
+}
+
+#custom-checkbox:selected .box{
+    -fx-border-color:#35AADC;
+    -fx-background-color: #35AADC;
+}
+
+#custom-checkbox .mfx-ripple-generator{
+	-mfx-ripple-color: #35AADC;
+	-fx-opacity: 0.4;
+}
+
+/*******************************************************************************
+* Top-bar, Minimize, Close, Mode                                               *
+*******************************************************************************/
+
+#top-bar{
+    -fx-background-color: #2d2d2d;
+}
+
+#custom-theme-switch .mfx-font-icon{
+    -mfx-description: "fas-sun";
+    -mfx-color: yellow;
+}
+
+#custom-close .mfx-font-icon{
+    -mfx-color: #e5e5e5;
+}
+
+#custom-minimize .mfx-font-icon{
+    -mfx-color: #e5e5e5;
+}
+
+#custom-theme-switch: hover,
+#custom-theme-switch: focused,
+#custom-minimize: hover,
+#custom-minimize: focused{
+    -fx-background-color:#272727;
+}
+
+#custom-theme-switch: pressed,
+#custom-minimize: pressed{
+    -fx-background-color: #303030;
+}
+
+#custom-close: hover,
+#custom-close: focused,
+#custom-close: hover .mfx-font-icon,
+#custom-close: focused .mfx-font-icon{
+    -fx-background-color:#E81123;
+    -mfx-color: #fff;
+}
+
+#custom-close: pressed{
+    -fx-background-color: #F1707A;
+}

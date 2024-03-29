@@ -1,0 +1,78 @@
+/**************************************************
+ * Navigation
+**************************************************/
+
+.sidebar {
+	-fx-background-color: #125488;
+	-fx-background-radius: 0 0 0 6;
+	-fx-max-width: 60;
+}
+
+.logo{
+    -fx-image: url("..\images\SANUSBRAIN-ICON.png");
+}
+
+
+/**************************************************
+ * MFX-Button, MFX-Toggle-Button
+**************************************************/
+
+#custom-sidebar-button,
+#custom-sidebar-toggle-button{
+    -fx-background-color:transparent;
+    -fx-background-radius:10;
+    -fx-background-insets: 2 8;
+    -fx-border-color: transparent;
+    -fx-border-width: 0 0 0 2;
+    -fx-border-radius:0;
+    -fx-min-height: 50;
+}
+
+#custom-sidebar-toggle-button .mfx-ripple-generator{
+    /*???*/
+}
+
+#custom-sidebar-button .mfx-ripple-generator,
+#custom-sidebar-toggle-button .mfx-ripple-generator{
+    -mfx-ripple-color: #35AADC;
+    -mfx-auto-clip: false;
+}
+
+#custom-sidebar-toggle-button .mfx-ripple-generator{
+    -fx-translate-x:-6;
+}
+
+#custom-sidebar-button: hover,
+#custom-sidebar-toggle-button: hover{
+    -fx-background-color: #1254;
+}
+
+#custom-sidebar-toggle-button: selected{
+    -fx-background-color: #1254;
+    -fx-border-width: 0 0 0 2;
+    -fx-border-color: #35aadc;
+}
+
+#custom-sidebar-toggle-button:selected .mfx-ripple-generator {
+	-mfx-paused: true;
+}
+
+/**************************************************
+ * MFX-Font-Icon
+**************************************************/
+
+.mfx-font-icon{
+    -mfx-size: 22;
+    -fx-translate-x: -1;
+    -fx-opacity: 0.75;
+}
+
+#custom-sidebar-button: hover .mfx-font-icon,
+#custom-sidebar-toggle-button: hover .mfx-font-icon{
+    -fx-opacity: 1;
+}
+
+#custom-sidebar-button: selected .mfx-font-icon,
+#custom-sidebar-toggle-button: selected .mfx-font-icon {
+	-fx-opacity: 1;
+}
