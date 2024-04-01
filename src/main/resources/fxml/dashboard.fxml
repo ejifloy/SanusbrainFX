@@ -1,11 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import io.github.palexdev.materialfx.controls.MFXScrollPane?>
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.FlowPane?>
 <?import javafx.scene.layout.Pane?>
 
-
-<BorderPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sanusbrain.Controllers.PrimaryController">
+<BorderPane prefHeight="960.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sanusbrain.Controllers.PrimaryController">
    <top>
       <Pane prefHeight="50.0" style="-fx-background-color: lightgrey;" BorderPane.alignment="CENTER" />
    </top>
+   <center>
+      <MFXScrollPane fitToHeight="true" fitToWidth="true" hbarPolicy="NEVER" maxWidth="1200.0" minWidth="200.0" style="-fx-background-color: transparent;" vbarPolicy="NEVER">
+         <content>
+            <FlowPane alignment="TOP_CENTER" hgap="20.0" maxWidth="1200.0" minWidth="240.0" style="-fx-background-color: transparent;" vgap="40.0">
+               <children>
+                  <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="240.0" prefWidth="320.0" style="-fx-background-color: lightblue;" />
+                  <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="240.0" prefWidth="320.0" style="-fx-background-color: lightgreen;" />
+                  <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="240.0" prefWidth="320.0" style="-fx-background-color: lightyellow;" />
+                  <Pane prefHeight="240.0" prefWidth="480.0" style="-fx-background-color: pink;" />
+                  <Pane prefHeight="240.0" prefWidth="480.0" style="-fx-background-color: beige;" />
+                  <Pane prefHeight="360.0" prefWidth="980.0" style="-fx-background-color: aquamarine;" />
+               </children>
+               <padding>
+                  <Insets top="20.0" />
+               </padding>
+            </FlowPane>
+         </content>
+      </MFXScrollPane>
+   </center>
 </BorderPane>
