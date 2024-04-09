@@ -9,7 +9,7 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox alignment="TOP_CENTER" minWidth="60.0" spacing="1.0" styleClass="sidebar" stylesheets="@../css/navigation.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+<VBox alignment="TOP_CENTER" minWidth="60.0" spacing="1.0" styleClass="sidebar" stylesheets="@../css/navigation.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sanusbrain.Controllers.NavigationController">
    <ImageView fitHeight="65.0" fitWidth="54.0" pickOnBounds="true" preserveRatio="true" styleClass="icon">
       <image>
          <Image url="@../images/Logo_dark.PNG" />
@@ -19,7 +19,7 @@
       </VBox.margin>
    </ImageView>
    <VBox fx:id="navBar" alignment="CENTER" prefWidth="80.0" spacing="1.0" styleClass="navbar" VBox.vgrow="ALWAYS">
-      <MFXRectangleToggleNode id="custom-sidebar-toggle-button" contentDisplay="CENTER" selected="true">
+      <MFXRectangleToggleNode id="custom-sidebar-toggle-button" contentDisplay="CENTER" onAction="#onHomeEvent" selected="true">
          <graphic>
             <MFXFontIcon color="white" description="fas-house" />
          </graphic>
@@ -30,23 +30,23 @@
             <Insets />
          </VBox.margin>
       </MFXRectangleToggleNode>
-      <MFXRectangleToggleNode id="custom-sidebar-toggle-button" contentDisplay="CENTER" toggleGroup="$sidebar">
+      <MFXRectangleToggleNode id="custom-sidebar-toggle-button" contentDisplay="CENTER" onAction="#onPatientsEvent" toggleGroup="$sidebar">
          <graphic>
             <MFXFontIcon color="white" description="fas-book-medical" />
          </graphic>
       </MFXRectangleToggleNode>
-      <MFXRectangleToggleNode id="custom-sidebar-toggle-button" contentDisplay="CENTER" toggleGroup="$sidebar">
+      <MFXRectangleToggleNode id="custom-sidebar-toggle-button" contentDisplay="CENTER" onAction="#onSettingsEvent" toggleGroup="$sidebar">
          <graphic>
             <MFXFontIcon color="white" description="fas-gear" />
          </graphic>
       </MFXRectangleToggleNode>
    </VBox>
-   <MFXButton id="custom-sidebar-button" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" prefHeight="50.0" prefWidth="100.0">
+   <MFXButton id="custom-sidebar-button" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" onAction="#onLogoutEvent" prefHeight="50.0" prefWidth="100.0">
       <graphic>
          <MFXFontIcon color="white" description="fas-arrow-right-from-bracket" rotate="180.0" />
       </graphic>
    </MFXButton>
-   <MFXButton id="custom-sidebar-button" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" minHeight="50.0" prefHeight="50.0" prefWidth="80.0">
+   <MFXButton id="custom-sidebar-close-button" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" minHeight="50.0" onAction="#onExitEvent" prefHeight="50.0" prefWidth="80.0">
       <graphic>
          <MFXFontIcon color="white" description="fas-xmark" />
       </graphic>

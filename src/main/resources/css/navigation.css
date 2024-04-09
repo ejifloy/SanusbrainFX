@@ -18,6 +18,7 @@
 **************************************************/
 
 #custom-sidebar-button,
+#custom-sidebar-close-button,
 #custom-sidebar-toggle-button{
     -fx-background-color:transparent;
     -fx-background-radius:10;
@@ -55,6 +56,15 @@
 
 #custom-sidebar-toggle-button:selected .mfx-ripple-generator {
 	-mfx-paused: true;
+}
+
+#custom-sidebar-close-button: hover,
+#custom-sidebar-close-button: focused{
+    -fx-background-color:#A3111F;
+}
+
+#custom-sidebar-close-button: pressed{
+     -fx-background-color: #F1707A;
 }
 
 /**************************************************

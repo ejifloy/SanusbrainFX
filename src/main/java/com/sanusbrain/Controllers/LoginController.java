@@ -49,12 +49,12 @@ public class LoginController implements Initializable {
     }
 
 
-    // Event used to establish a connection to the Database through "startConnection" from "MySQLConnection"-Class
     // Checks whether the username and password are correct. If not, shows Validation-Warning.
     // If the Input is correct and exists, the Dashboard-FXML will be loaded.
     @FXML
     private void loginEvent(ActionEvent actionEvent) throws IOException {
-        Model.getInstance().getViewFactory().closeStage(((Stage) fxUsernameTextField.getScene().getWindow()));
+        //TODO: Check Login Data
+        Model.getInstance().getViewFactory().closeWindow(((Stage) fxUsernameTextField.getScene().getWindow()));
         Model.getInstance().getViewFactory().showDashboardWindow();
     }
 
@@ -189,7 +189,7 @@ public class LoginController implements Initializable {
     // Event to close the Login-Window through the close button in the custom top-bar
     @FXML
     private void closeWindow(ActionEvent actionEvent) {
-        //saveLoginSettings();
+        //TODO: saveLoginSettings();
         System.exit(0);
     }
 

@@ -1,11 +1,13 @@
 package com.sanusbrain.Controllers;
 
+import com.sanusbrain.Models.Model;
 import io.github.palexdev.mfxresources.fonts.MFXFontIcon;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
 
@@ -19,17 +21,32 @@ public class PrimaryController implements Initializable {
 
     @FXML
     private AnchorPane parent;
+
+    @FXML
+    private BorderPane primaryBorderPane;
+
     @FXML
     private HBox fxTopBar;
 
     @FXML
     private MFXFontIcon mfxModeIcon;
 
+    @FXML
+    private MFXFontIcon mfxWindowIcon;
+
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-
+        //Adding a Listener that handles Navigation-Events to switch Views
+        Model.getInstance().getViewFactory().getPrimarySelectedViewItem().addListener((observable, oldValue, newValue) -> {
+            switch (newValue){
+                case "Dashboard"-> primaryBorderPane.setCenter(Model.getInstance().getViewFactory().getDashboardView());
+                case "Settings" -> primaryBorderPane.setCenter(Model.getInstance().getViewFactory().getSettingsView());
+                default -> primaryBorderPane.setCenter(Model.getInstance().getViewFactory().getDashboardView());
+            }
+        });
     }
 
+    //Event to switch between light and dark css-files
     @FXML
     private void switchMode() {
         if (mfxModeIcon.getDescription().equals("fas-sun")) {
@@ -43,18 +60,19 @@ public class PrimaryController implements Initializable {
         }
     }
 
-    // Event to minimize the Login-Window through the minimize button in the custom top-bar
+    // Events to max-/minimize or close the current Window through custom top-bar
     @FXML
     private void minimizeWindow(ActionEvent actionEvent) {
-        Stage stage = (Stage) fxTopBar.getScene().getWindow();
-        stage.setIconified(true);
+        Model.getInstance().getViewFactory().minimizeWindow(((Stage) fxTopBar.getScene().getWindow()));
     }
-
-    // Event to close the Login-Window through the close button in the custom top-bar
+    @FXML
+    private void maximizeWindow(ActionEvent actionEvent) {
+        Model.getInstance().getViewFactory().maximizeWindow(((Stage) fxTopBar.getScene().getWindow()));
+        mfxWindowIcon.setDescription((mfxWindowIcon.getDescription().equals("fas-window-maximize")) ? "fas-window-restore":"fas-window-maximize");
+    }
     @FXML
     private void closeWindow(ActionEvent actionEvent) {
-        //saveLoginSettings();
-        System.exit(0);
+        Model.getInstance().getViewFactory().closeWindow(((Stage) fxTopBar.getScene().getWindow()));
     }
 
     //Press and Drag-Event for Custom Top-Bar

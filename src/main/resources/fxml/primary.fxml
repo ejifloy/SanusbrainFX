@@ -25,11 +25,13 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="parent" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sanusbrain.Controllers.PrimaryController">
+<AnchorPane fx:id="parent" minHeight="640.0" minWidth="360.0" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sanusbrain.Controllers.PrimaryController">
 
-   <HBox id="top-bar" fx:id="fxTopBar" alignment="TOP_RIGHT" layoutX="-1.0" onMouseDragged="#onDragTopBar" onMousePressed="#onPressedTopBar" opacity="0.76" prefHeight="35.0" prefWidth="1280.0" styleClass="radius-half" stylesheets="@../css/topbar.css" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+   <HBox id="top-bar" fx:id="fxTopBar" alignment="TOP_RIGHT" layoutX="-1.0" opacity="0.76" prefHeight="35.0" prefWidth="1280.0" styleClass="radius-half" stylesheets="@../css/topbar.css" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <Pane onMouseDragged="#onDragTopBar" onMousePressed="#onPressedTopBar" prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS" />
       <Button id="custom-theme-switch" alignment="CENTER" contentDisplay="CENTER" graphicTextGap="1.0" mnemonicParsing="false" onAction="#switchMode" prefHeight="35.0" prefWidth="45.0" translateY="-1.0">
          <graphic>
             <MFXFontIcon fx:id="mfxModeIcon" />
@@ -43,6 +45,14 @@
             <MFXFontIcon />
          </graphic>
       </Button>
+      <Button id="custom-maximize" alignment="CENTER" contentDisplay="CENTER" graphicTextGap="1.0" mnemonicParsing="false" onAction="#maximizeWindow" prefHeight="35.0" prefWidth="45.0">
+         <font>
+            <Font name="Harrington" size="12.0" />
+         </font>
+         <graphic>
+            <MFXFontIcon fx:id="mfxWindowIcon" description="fas-window-maximize" />
+         </graphic>
+      </Button>
       <Button id="custom-close" alignment="CENTER" contentDisplay="CENTER" graphicTextGap="1.0" mnemonicParsing="false" onAction="#closeWindow" prefHeight="35.0" prefWidth="45.0" translateY="-1.0">
          <graphic>
             <MFXFontIcon wrappingWidth="9.0" />
@@ -50,7 +60,7 @@
       </Button>
    </HBox>
 
-   <BorderPane layoutX="93.0" layoutY="52.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="35.0">
+   <BorderPane fx:id="primaryBorderPane" layoutX="93.0" layoutY="52.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="35.0">
       <left>
          <fx:include source="navigation.fxml" />
       </left>

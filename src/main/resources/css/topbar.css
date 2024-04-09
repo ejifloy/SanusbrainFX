@@ -1,7 +1,5 @@
 /*******************************************************************************
-*                                                                              *
 * Top-bar, MFX-Button, MFX-Font-Icon                                           *
-*                                                                              *
 *******************************************************************************/
 
 #custom-theme-switch{
@@ -14,9 +12,14 @@
     -fx-background-radius : 0 0 0 0;
 }
 
+#custom-maximize{
+    -fx-background-color: transparent;
+    -fx-background-radius : 0 0 0 0;
+}
+
 #custom-close{
     -fx-background-color: transparent;
-    -fx-background-radius : 0 4 0 0;
+    -fx-background-radius : 0 6 0 0;
 }
 
 #custom-theme-switch .mfx-font-icon{
@@ -31,6 +34,18 @@
 #custom-minimize .mfx-font-icon{
     -mfx-description: "fas-window-minimize";
     -mfx-size: 14;
+}
+
+#custom-maximize .mfx-font-icon{
+    -mfx-size: 14;
+}
+
+#custom-close: hover,
+#custom-close: focused,
+#custom-close: hover .mfx-font-icon,
+#custom-close: focused .mfx-font-icon{
+    -fx-background-color:#E81123;
+    -mfx-color: #fff;
 }
 
 #custom-close: pressed{

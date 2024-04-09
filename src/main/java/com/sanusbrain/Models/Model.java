@@ -4,7 +4,8 @@ import com.sanusbrain.Views.ViewFactory;
 
 public class Model {
     /*
-    * Using Singleton-Pattern to use one Instance of ViewFactory-Object
+    * Using Singleton-Design-Pattern to use one Instance of ViewFactory-Object
+    * @param model
     * */
     private static Model model;
     private final ViewFactory viewFactory;

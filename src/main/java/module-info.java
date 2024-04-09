@@ -13,4 +13,5 @@ module com.sanusbrain {
     exports com.sanusbrain.Models;
     exports com.sanusbrain.Views;
     exports com.sanusbrain.Controllers;
+    exports com.sanusbrain.Util;
 }

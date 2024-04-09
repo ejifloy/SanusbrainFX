@@ -134,34 +134,23 @@
     -mfx-color: yellow;
 }
 
-#custom-close .mfx-font-icon{
-    -mfx-color: #e5e5e5;
-}
-
-#custom-minimize .mfx-font-icon{
+#custom-close .mfx-font-icon,
+#custom-minimize .mfx-font-icon,
+#custom-maximize .mfx-font-icon{
     -mfx-color: #e5e5e5;
 }
 
 #custom-theme-switch: hover,
 #custom-theme-switch: focused,
 #custom-minimize: hover,
-#custom-minimize: focused{
+#custom-minimize: focused,
+#custom-maximize: hover,
+#custom-maximize: focused{
     -fx-background-color:#272727;
 }
 
 #custom-theme-switch: pressed,
-#custom-minimize: pressed{
+#custom-minimize: pressed,
+#custom-maximize: pressed{
     -fx-background-color: #303030;
-}
-
-#custom-close: hover,
-#custom-close: focused,
-#custom-close: hover .mfx-font-icon,
-#custom-close: focused .mfx-font-icon{
-    -fx-background-color:#E81123;
-    -mfx-color: #fff;
-}
-
-#custom-close: pressed{
-    -fx-background-color: #F1707A;
 }
