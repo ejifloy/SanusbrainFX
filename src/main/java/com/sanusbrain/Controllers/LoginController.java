@@ -55,7 +55,7 @@ public class LoginController implements Initializable {
     private void loginEvent(ActionEvent actionEvent) throws IOException {
         //TODO: Check Login Data
         Model.getInstance().getViewFactory().closeWindow(((Stage) fxUsernameTextField.getScene().getWindow()));
-        Model.getInstance().getViewFactory().showDashboardWindow();
+        Model.getInstance().getViewFactory().showPrimaryWindow();
     }
 
 

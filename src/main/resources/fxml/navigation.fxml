@@ -32,7 +32,7 @@
       </MFXRectangleToggleNode>
       <MFXRectangleToggleNode id="custom-sidebar-toggle-button" contentDisplay="CENTER" onAction="#onPatientsEvent" toggleGroup="$sidebar">
          <graphic>
-            <MFXFontIcon color="white" description="fas-book-medical" />
+            <MFXFontIcon color="white" description="fas-clipboard-user" />
          </graphic>
       </MFXRectangleToggleNode>
       <MFXRectangleToggleNode id="custom-sidebar-toggle-button" contentDisplay="CENTER" onAction="#onSettingsEvent" toggleGroup="$sidebar">

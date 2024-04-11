@@ -36,17 +36,31 @@ public class PrimaryController implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        //Adding a Listener that handles Navigation-Events to switch Views
-        Model.getInstance().getViewFactory().getPrimarySelectedViewItem().addListener((observable, oldValue, newValue) -> {
+
+        //Adding a Listener to SimpleStringProperty that handles Navigation-Events to switch Views
+        Model.getInstance().getViewFactory().getAdminSelectedViewItem().addListener((observable, oldValue, newValue) -> {
             switch (newValue){
-                case "Dashboard"-> primaryBorderPane.setCenter(Model.getInstance().getViewFactory().getDashboardView());
-                case "Settings" -> primaryBorderPane.setCenter(Model.getInstance().getViewFactory().getSettingsView());
+                case DASHBOARD-> primaryBorderPane.setCenter(Model.getInstance().getViewFactory().getDashboardView());
+                case PATIENTS -> primaryBorderPane.setCenter(Model.getInstance().getViewFactory().getPatientsView());
+                case SETTINGS -> primaryBorderPane.setCenter(Model.getInstance().getViewFactory().getSettingsView());
                 default -> primaryBorderPane.setCenter(Model.getInstance().getViewFactory().getDashboardView());
             }
         });
     }
 
-    //Event to switch between light and dark css-files
+
+
+
+
+
+
+
+
+
+
+    /*******************************************************************************
+     * Event to switch theme, min-/maximize,close and drag Window...               *
+     *******************************************************************************/
     @FXML
     private void switchMode() {
         if (mfxModeIcon.getDescription().equals("fas-sun")) {

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import io.github.palexdev.materialfx.controls.MFXButton?>
+<?import io.github.palexdev.materialfx.controls.MFXTableView?>
+<?import io.github.palexdev.mfxresources.fonts.MFXFontIcon?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="patientsView" prefHeight="620.0" prefWidth="960.0" maxWidth="1200.0" maxHeight="960" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sanusbrain.Controllers.PatientsController">
+   <children>
+      <MFXTableView layoutY="59.0" prefHeight="341.0" prefWidth="606.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="150.0" />
+      <MFXButton contentDisplay="GRAPHIC_ONLY" layoutX="890.0" layoutY="50.0" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: #35aadc;" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="50.0">
+         <graphic>
+            <MFXFontIcon color="white" description="fas-user-minus" size="24" />
+         </graphic>
+      </MFXButton>
+      <MFXButton contentDisplay="GRAPHIC_ONLY" layoutX="830.0" layoutY="50.0" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: #35aadc;" AnchorPane.rightAnchor="80.0">
+         <graphic>
+            <MFXFontIcon color="white" description="fas-user-plus" size="24" />
+         </graphic>
+      </MFXButton>
+      <MFXButton contentDisplay="GRAPHIC_ONLY" layoutX="890.0" layoutY="550.0" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent;" AnchorPane.bottomAnchor="20.0" AnchorPane.rightAnchor="20.0">
+         <graphic>
+            <MFXFontIcon color="black" description="fas-print" size="18" />
+         </graphic>
+      </MFXButton>
+   </children>
+</AnchorPane>

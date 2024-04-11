@@ -2,6 +2,8 @@ package com.sanusbrain.Views;
 
 import com.sanusbrain.App;
 import com.sanusbrain.Util.ResizeHelper;
+import javafx.beans.property.ObjectProperty;
+import javafx.beans.property.SimpleObjectProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -19,19 +21,33 @@ import java.util.Objects;
 
 public class ViewFactory {
 
+    /*
+    * Admin Views
+    * */
+
+    //Variable for switching between different views using Enum-Class AdminViewOptions
+    private final ObjectProperty<AdminViewOptions> adminSelectedViewItem;
     private BorderPane dashboardView;
     private AnchorPane settingsView;
+    private AnchorPane patientsView;
 
 
-    private final SimpleStringProperty primarySelectedViewItem;
+    /*
+     * TODO: Manager Views...
+     * */
 
+
+    /*
+    * Admin-View Section
+    * */
     public ViewFactory(){
-        this.primarySelectedViewItem = new SimpleStringProperty("");
+        this.adminSelectedViewItem = new SimpleObjectProperty<>();
     }
 
-    public SimpleStringProperty getPrimarySelectedViewItem(){
-        return primarySelectedViewItem;
+    public ObjectProperty<AdminViewOptions> getAdminSelectedViewItem(){
+        return adminSelectedViewItem;
     }
+
 
     public BorderPane getDashboardView(){
         if(dashboardView == null) {
@@ -57,25 +73,31 @@ public class ViewFactory {
         return settingsView;
     }
 
+    public AnchorPane getPatientsView(){
+        if(patientsView == null){
+            try {
+                patientsView = new FXMLLoader(getClass().getResource("/fxml/patients.fxml")).load();
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+        }
+        return patientsView;
+    }
+
     public void showLoginWindow() throws IOException{
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/login.fxml"));
         createStage(loader);
     }
 
-    public void showDashboardWindow() throws IOException{
+    public void showPrimaryWindow() throws IOException{
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/primary.fxml"));
+        /*TODO: Keep in mind for later...
+        * PrimaryController primaryController = new PrimaryController();
+        * loader.setController(primaryController);
+        * */
         createStage(loader);
     }
 
-    public void showPatientsWindow() throws IOException{
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/patients.fxml"));
-        createStage(loader);
-    }
-
-    public void showSettingsWindow() throws IOException{
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/settings.fxml"));
-        createStage(loader);
-    }
     private static void createStage(FXMLLoader loader) throws IOException {
         Parent root = loader.load();
         Scene scene = new Scene(root);
