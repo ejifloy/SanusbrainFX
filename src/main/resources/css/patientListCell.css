@@ -1,0 +1,79 @@
+/*******************************************************************************
+* Anchor-Pane, Container, Pane...                                              *
+*******************************************************************************/
+
+.cell_container{
+    /*Dark color*/
+    -fx-background-color: #323232;
+    -fx-background-radius: 10;
+}
+
+.cell_container Line{
+    /*Dark color*/
+    -fx-background-color: #323232;
+    -fx-background-radius: 10;
+    -fx-stroke: lightgrey;
+}
+
+
+/*******************************************************************************
+* Label, Text...                                                               *
+*******************************************************************************/
+
+#custom-male-label{
+    -fx-text-fill:white;
+    -fx-font-size:20;
+    -fx-font-family:"Segoe UI";
+
+    -fx-pref-width:50;
+    -fx-pref-height:50;
+
+    -fx-background-color:#e9478b;
+    -fx-background-radius:25;
+    -fx-border-color:#e9478b;
+    -fx-border-width:2;
+    -fx-border-radius:25;
+}
+
+.text-data{
+    -fx-text-fill: #fff;
+    -fx-font-weight: 600;
+}
+
+.text-address{
+    -fx-text-fill: #fff;
+    -fx-font-weight: 700;
+}
+
+
+/*******************************************************************************
+* MFX Button                                                                   *
+*******************************************************************************/
+
+#custom-list-cell-button{
+    -fx-min-height:40;
+    -fx-min-width:40;
+    -fx-background-radius:20;
+    -fx-background-color: transparent;
+}
+
+#custom-list-cell-button:hover{
+    -fx-background-color: #555;
+}
+
+#custom-list-cell-button .mfx-ripple-generator{
+    -mfx-auto-clip:true;
+}
+
+
+/*******************************************************************************
+* MFX-Font-Icon                                                                *
+*******************************************************************************/
+#custom-list-cell-button .mfx-font-icon{
+    -mfx-color: #fff;
+    -fx-opacity: 0.5;
+}
+
+#custom-list-cell-button:hover .mfx-font-icon{
+    -fx-opacity:1;
+}

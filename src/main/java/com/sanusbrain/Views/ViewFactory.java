@@ -1,10 +1,9 @@
 package com.sanusbrain.Views;
 
 import com.sanusbrain.App;
-import com.sanusbrain.Util.ResizeHelper;
+import com.sanusbrain.Utils.ResizeHelper;
 import javafx.beans.property.ObjectProperty;
 import javafx.beans.property.SimpleObjectProperty;
-import javafx.beans.property.SimpleStringProperty;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;

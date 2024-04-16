@@ -17,8 +17,7 @@
  * MFX-Button, MFX-Toggle-Button
 **************************************************/
 
-#custom-sidebar-button,
-#custom-sidebar-close-button,
+
 #custom-sidebar-toggle-button{
     -fx-background-color:transparent;
     -fx-background-radius:10;
@@ -29,14 +28,22 @@
     -fx-min-height: 50;
 }
 
-#custom-sidebar-toggle-button .mfx-ripple-generator{
-    /*???*/
+#custom-sidebar-button,
+#custom-sidebar-close-button{
+    -fx-min-height:40;
+    -fx-min-width:40;
+    -fx-background-radius:10;
+    -fx-background-color: transparent;
 }
 
 #custom-sidebar-button .mfx-ripple-generator,
 #custom-sidebar-toggle-button .mfx-ripple-generator{
     -mfx-ripple-color: #35AADC;
-    -mfx-auto-clip: false;
+    -mfx-auto-clip: true;
+}
+
+#custom-sidebar-close-button .mfx-ripple-generator{
+    -mfx-auto-clip:true;
 }
 
 #custom-sidebar-toggle-button .mfx-ripple-generator{

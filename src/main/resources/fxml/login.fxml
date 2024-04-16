@@ -22,7 +22,7 @@
       <String fx:value="bg" />
    </styleClass>
    <stylesheets>
-      <URL value="@../css/login/login.css" />
+      <URL value="@../css/login.css" />
       <URL value="@../css/dark.css" />
    </stylesheets>
    <HBox id="top-bar" fx:id="fxTopBar" alignment="TOP_RIGHT" onMouseDragged="#onDragTopBar" onMousePressed="#onPressedTopBar" opacity="0.76" prefHeight="35.0" prefWidth="380.0" styleClass="radius-half" stylesheets="@../css/topbar.css">
@@ -106,7 +106,7 @@
          <Insets right="75.0" top="20.0" />
       </VBox.margin>
    </MFXCheckbox>
-   <MFXButton id="custom-login" minHeight="40.0" minWidth="220.0" onAction="#loginEvent" rippleColor="#d9e9ff" text="Anmelden" viewOrder="1.0">
+   <MFXButton id="custom-login-btn" minHeight="40.0" minWidth="220.0" onAction="#loginEvent" rippleColor="#d9e9ff" text="Anmelden" viewOrder="1.0">
       <VBox.margin>
          <Insets top="10.0" />
       </VBox.margin>

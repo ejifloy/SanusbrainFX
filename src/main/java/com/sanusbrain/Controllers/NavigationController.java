@@ -32,6 +32,10 @@ public class NavigationController {
 
     @FXML
     void onLogoutEvent(ActionEvent event) throws IOException {
+        //Set Login-Flag to false within Model
+        Model.getInstance().setAdminSuccessLoginFlag(false);
+
+        //Switch to Login-Window
         Model.getInstance().getViewFactory().closeWindow(((Stage) navBar.getScene().getWindow()));
         Model.getInstance().getViewFactory().showLoginWindow();
     }

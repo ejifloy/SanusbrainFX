@@ -9,7 +9,7 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox alignment="TOP_CENTER" minWidth="60.0" spacing="1.0" styleClass="sidebar" stylesheets="@../css/navigation.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sanusbrain.Controllers.NavigationController">
+<VBox alignment="TOP_CENTER" spacing="1.0" styleClass="sidebar" stylesheets="@../css/navigation.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sanusbrain.Controllers.NavigationController">
    <ImageView fitHeight="65.0" fitWidth="54.0" pickOnBounds="true" preserveRatio="true" styleClass="icon">
       <image>
          <Image url="@../images/Logo_dark.PNG" />
@@ -41,14 +41,20 @@
          </graphic>
       </MFXRectangleToggleNode>
    </VBox>
-   <MFXButton id="custom-sidebar-button" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" onAction="#onLogoutEvent" prefHeight="50.0" prefWidth="100.0">
+   <MFXButton id="custom-sidebar-button" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" onAction="#onLogoutEvent">
       <graphic>
          <MFXFontIcon color="white" description="fas-arrow-right-from-bracket" rotate="180.0" />
       </graphic>
+      <VBox.margin>
+         <Insets bottom="5.0" />
+      </VBox.margin>
    </MFXButton>
-   <MFXButton id="custom-sidebar-close-button" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" minHeight="50.0" onAction="#onExitEvent" prefHeight="50.0" prefWidth="80.0">
+   <MFXButton id="custom-sidebar-close-button" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" onAction="#onExitEvent">
       <graphic>
          <MFXFontIcon color="white" description="fas-xmark" />
       </graphic>
+      <VBox.margin>
+         <Insets bottom="5.0" />
+      </VBox.margin>
    </MFXButton>
 </VBox>

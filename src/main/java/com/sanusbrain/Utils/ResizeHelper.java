@@ -1,4 +1,4 @@
-package com.sanusbrain.Util;
+package com.sanusbrain.Utils;
 import javafx.collections.ObservableList;
 import javafx.event.EventHandler;
 import javafx.event.EventType;

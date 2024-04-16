@@ -1,0 +1,46 @@
+/*******************************************************************************
+* Anchor-Pane, Border-Pane, Pane...                                            *
+*******************************************************************************/
+
+
+/*******************************************************************************
+* Label, Font, Size                                                            *
+*******************************************************************************/
+
+.font-style{
+    -fx-font-family: "Segoe UI";
+    -fx-text-fill: #125488;
+}
+
+.font-size-title{
+    -fx-font-size: 24;
+}
+
+.font-size-text{
+    -fx-font-size: 14;
+}
+
+/*******************************************************************************
+* MFX Button                                                                   *
+*******************************************************************************/
+
+#custom-delete-patient-button,
+#custom-add-patient-button{
+    -fx-min-height:40;
+    -fx-min-width:40;
+    -fx-background-radius:20;
+    -fx-background-color: #35aadc;
+}
+
+#custom-add-patient-button .mfx-ripple-generator,
+#custom-delete-patient-button .mfx-ripple-generator{
+    -mfx-auto-clip:true;
+}
+
+/*******************************************************************************
+* MFX-Font-Icon                                                                *
+*******************************************************************************/
+
+#custom-font-icon{
+    -mfx-size: 16;
+}

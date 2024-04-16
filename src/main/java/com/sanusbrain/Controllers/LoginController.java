@@ -53,94 +53,26 @@ public class LoginController implements Initializable {
     // If the Input is correct and exists, the Dashboard-FXML will be loaded.
     @FXML
     private void loginEvent(ActionEvent actionEvent) throws IOException {
-        //TODO: Check Login Data
-        Model.getInstance().getViewFactory().closeWindow(((Stage) fxUsernameTextField.getScene().getWindow()));
-        Model.getInstance().getViewFactory().showPrimaryWindow();
-    }
+        //Evaluate Admin Login Credentials
+        Model.getInstance().evaluateAdminCredentials(fxUsernameTextField.getText(), fxPasswordField.getText());
 
-
-    private void applyValidation(Object field, String errorMessage, String compareString, Label validationLabel) {
-        // Create a Constraint
-        buildCondition(field, compareString, errorMessage);
-        // Add a Listener
-        addListener(field, errorMessage, validationLabel);
-    }
-
-    private void buildCondition(Object field, String compareString, String errorMessage) {
-        Constraint constraint;
-
-        if (field instanceof MFXPasswordField) {
-            MFXPasswordField passwordField = (MFXPasswordField) field;
-
-            // Add Constraint to Validator & apply on PasswordField
-            constraint = createConstraint(errorMessage, (Bindings.createBooleanBinding(
-                    () -> passwordField.getText().equals(compareString),
-                    passwordField.textProperty()
-            )));
-            passwordField.getValidator().constraint(constraint);
-
-        } else if (field instanceof MFXTextField) {
-            MFXTextField textField = ((MFXTextField) field);
-
-            // Add Constraint to Validator & apply on TextField
-            constraint = createConstraint(errorMessage, textField.textProperty().isEqualTo(compareString));
-            textField.getValidator().constraint(constraint);
+        if(Model.getInstance().getAdminSuccessLoginFlag()){
+            Model.getInstance().getViewFactory().closeWindow(((Stage) fxUsernameTextField.getScene().getWindow()));
+            Model.getInstance().getViewFactory().showPrimaryWindow();
+        }else{
+            //TODO: Show Login Error...
+            userValidationLabel.setVisible(true);
+            passwordValidationLabel.setVisible(true);
         }
+
     }
 
-    //Methode used to create a constraint with specific errorMessage and condition
-    private static Constraint createConstraint(String errorMessage, BooleanExpression condition) {
-        return Constraint.Builder.build()
-                .setSeverity(Severity.ERROR)
-                .setMessage(errorMessage)
-                .setCondition(condition)
-                .get();
-    }
 
-    //Methode used to apply Listener on field-Object with specific errorMessage on corresponding validationLabel
-    private void addListener(Object field, String errorMessage, Label validationLabel) {
-        if (field instanceof MFXPasswordField) {
-            MFXPasswordField passwordField = (MFXPasswordField) field;
 
-            passwordField.getValidator().validProperty().addListener((observable, oldValue, newValue) -> {
-                if (newValue) {
-                    validationLabel.setVisible(false);
-                    passwordField.pseudoClassStateChanged(INVALID_PSEUDO_CLASS, false);
-                }
-            });
 
-            passwordField.delegateFocusedProperty().addListener((observable, oldValue, newValue) -> {
-                if (oldValue && !newValue) {
-                    passwordField.validate();
-                    passwordField.pseudoClassStateChanged(INVALID_PSEUDO_CLASS, true);
-                    validationLabel.setText(errorMessage);
-                    validationLabel.setVisible(true);
 
-                }
-            });
-        } else if (field instanceof MFXTextField) {
-            MFXTextField textField = ((MFXTextField) field);
 
-            textField.getValidator().validProperty().addListener((observable, oldValue, newValue) -> {
-                if (newValue) {
-                    validationLabel.setVisible(false);
-                    textField.pseudoClassStateChanged(INVALID_PSEUDO_CLASS, false);
-                }
-            });
 
-            //Add Listener to TextField
-            textField.delegateFocusedProperty().addListener((observable, oldValue, newValue) -> {
-                if (oldValue && !newValue) {
-                    textField.validate();
-                    textField.pseudoClassStateChanged(INVALID_PSEUDO_CLASS, true);
-                    validationLabel.setText(errorMessage);
-                    validationLabel.setVisible(true);
-
-                }
-            });
-
-        }
-    }
 
     // Methode used to add Validation-Feature to JFXTextField,-PasswordField and -TextArea
     // Receives a List of nodes and iterates through it. Checks each node by "validate()".
