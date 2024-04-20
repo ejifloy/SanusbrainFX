@@ -29,6 +29,7 @@ public class ViewFactory {
     private BorderPane dashboardView;
     private AnchorPane settingsView;
     private AnchorPane patientsView;
+    private AnchorPane patientView;
 
 
     /*
@@ -81,6 +82,17 @@ public class ViewFactory {
             }
         }
         return patientsView;
+    }
+
+    public AnchorPane getPatientView(){
+        if(patientView == null){
+            try {
+                patientView = new FXMLLoader(getClass().getResource("/fxml/patient/patient.fxml")).load();
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+        }
+        return patientView;
     }
 
     public void showLoginWindow() throws IOException{

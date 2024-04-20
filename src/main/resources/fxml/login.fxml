@@ -58,7 +58,7 @@
          <Font name="Segoe UI" size="18.0" />
       </font>
    </Label>
-   <MFXTextField id="custom-text-field" fx:id="fxUsernameTextField" floatMode="BORDER" floatingText="Benutzername" graphicTextGap="5.0" maxHeight="30.0" maxWidth="220.0" minHeight="40.0" minWidth="220.0" prefColumnCount="20">
+   <MFXTextField id="custom-text-field" fx:id="fxUsernameTextField" floatMode="BORDER" floatingText="Benutzername" graphicTextGap="5.0" maxHeight="40.0" maxWidth="220.0" minHeight="40.0" minWidth="220.0" prefColumnCount="20">
       <font>
          <Font name="Segoe UI" size="14.0" />
       </font>
@@ -81,7 +81,7 @@
          <Insets top="2.0" />
       </padding>
    </Label>
-   <MFXPasswordField id="custom-password-field" fx:id="fxPasswordField" allowCopy="true" allowCut="true" allowPaste="true" floatMode="BORDER" floatingText="Password" floatingTextGap="10.0" graphicTextGap="5.0" maxHeight="30.0" maxWidth="220.0" minHeight="40.0" minWidth="220.0">
+   <MFXPasswordField id="custom-password-field" fx:id="fxPasswordField" allowCopy="true" allowCut="true" allowPaste="true" floatMode="BORDER" floatingText="Password" floatingTextGap="10.0" graphicTextGap="5.0" maxHeight="40.0" maxWidth="220.0" minHeight="40.0" minWidth="220.0">
       <font>
          <Font name="Segoe UI" size="14.0" />
       </font>

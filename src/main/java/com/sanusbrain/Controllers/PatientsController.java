@@ -1,5 +1,8 @@
 package com.sanusbrain.Controllers;
 
+import com.sanusbrain.Models.Model;
+import com.sanusbrain.Views.AdminViewOptions;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.layout.AnchorPane;
@@ -14,5 +17,10 @@ public class PatientsController implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
 
+    }
+
+    @FXML
+    private void onCreatePatient(ActionEvent actionEvent) {
+        Model.getInstance().getViewFactory().getAdminSelectedViewItem().set(AdminViewOptions.PATIENT);
     }
 }

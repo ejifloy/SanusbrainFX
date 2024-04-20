@@ -14,4 +14,6 @@ module com.sanusbrain {
     exports com.sanusbrain.Views;
     exports com.sanusbrain.Controllers;
     exports com.sanusbrain.Utils;
+    exports com.sanusbrain.Controllers.Patient;
+    opens com.sanusbrain.Controllers.Patient to MaterialFX, javafx.fxml;
 }

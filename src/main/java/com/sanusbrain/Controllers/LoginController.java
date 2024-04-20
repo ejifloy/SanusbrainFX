@@ -54,7 +54,7 @@ public class LoginController implements Initializable {
     @FXML
     private void loginEvent(ActionEvent actionEvent) throws IOException {
         //Evaluate Admin Login Credentials
-        Model.getInstance().evaluateAdminCredentials(fxUsernameTextField.getText(), fxPasswordField.getText());
+        //Model.getInstance().evaluateAdminCredentials(fxUsernameTextField.getText(), fxPasswordField.getText());
 
         if(Model.getInstance().getAdminSuccessLoginFlag()){
             Model.getInstance().getViewFactory().closeWindow(((Stage) fxUsernameTextField.getScene().getWindow()));

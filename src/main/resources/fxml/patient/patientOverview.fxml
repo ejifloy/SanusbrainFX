@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<HBox alignment="CENTER_LEFT" maxHeight="160.0" spacing="10.0" style="-fx-background-color: beige;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sanusbrain.Controllers.Patient.PatientOverviewController">
+    <HBox alignment="CENTER_LEFT" fillHeight="false" maxWidth="300.0" minWidth="260.0" style="-fx-background-color: aqua;" HBox.hgrow="ALWAYS">
+        <Label id="custom-male-label" alignment="CENTER" contentDisplay="TEXT_ONLY" prefHeight="80.0" prefWidth="80.0" text="CF" textAlignment="CENTER">
+            <HBox.margin>
+                <Insets left="15.0" right="15.0" />
+            </HBox.margin>
+            <font>
+                <Font size="30.0" />
+            </font>
+        </Label>
+        <VBox alignment="CENTER_LEFT" spacing="20.0" HBox.hgrow="ALWAYS">
+            <Label text="13.03.1994 (29 jahre)" />
+            <Label text="Claudia Fischer">
+                <font>
+                    <Font size="22.0" />
+                </font>
+            </Label>
+            <Label text="weiblich" />
+        </VBox>
+    </HBox>
+    <HBox alignment="CENTER_LEFT" maxWidth="300.0" minWidth="260.0" style="-fx-background-color: aqua;" HBox.hgrow="ALWAYS">
+        <VBox alignment="CENTER_LEFT" HBox.hgrow="ALWAYS">
+            <Label text="Kontakt">
+                <VBox.margin>
+                    <Insets bottom="15.0" left="15.0" top="15.0" />
+                </VBox.margin>
+                <font>
+                    <Font size="18.0" />
+                </font>
+            </Label>
+            <HBox prefHeight="30.0">
+                <VBox.margin>
+                    <Insets left="15.0" />
+                </VBox.margin>
+                <Label prefWidth="150.0" text="Kostenträger" />
+                <Label text="Label" />
+            </HBox>
+            <HBox prefHeight="30.0">
+                <VBox.margin>
+                    <Insets left="15.0" />
+                </VBox.margin>
+                <Label prefWidth="150.0" text="Label" />
+                <Label text="Label" />
+            </HBox>
+            <HBox prefHeight="30.0">
+                <VBox.margin>
+                    <Insets left="15.0" />
+                </VBox.margin>
+                <Label prefWidth="150.0" text="Label" />
+                <Label text="Label" />
+            </HBox>
+        </VBox>
+    </HBox>
+    <HBox alignment="CENTER_LEFT" maxWidth="300.0" minWidth="260.0" style="-fx-background-color: aqua;" HBox.hgrow="ALWAYS">
+        <VBox alignment="CENTER_LEFT" HBox.hgrow="ALWAYS">
+            <Label text="Kontakt">
+                <VBox.margin>
+                    <Insets bottom="15.0" left="15.0" top="15.0" />
+                </VBox.margin>
+                <font>
+                    <Font size="18.0" />
+                </font>
+            </Label>
+            <HBox prefHeight="30.0">
+                <VBox.margin>
+                    <Insets left="15.0" />
+                </VBox.margin>
+                <Label prefWidth="150.0" text="Kostenträger" />
+                <Label text="Label" />
+            </HBox>
+            <HBox prefHeight="30.0">
+                <VBox.margin>
+                    <Insets left="15.0" />
+                </VBox.margin>
+                <Label prefWidth="150.0" text="Label" />
+                <Label text="Label" />
+            </HBox>
+            <HBox prefHeight="30.0">
+                <VBox.margin>
+                    <Insets left="15.0" />
+                </VBox.margin>
+                <Label prefWidth="150.0" text="Label" />
+                <Label text="Label" />
+            </HBox>
+        </VBox>
+    </HBox>
+    <HBox alignment="CENTER_LEFT" maxWidth="300.0" minWidth="260.0" style="-fx-background-color: aqua;" HBox.hgrow="ALWAYS">
+        <VBox alignment="CENTER_LEFT" HBox.hgrow="ALWAYS">
+            <Label text="Kontakt">
+                <VBox.margin>
+                    <Insets bottom="15.0" left="15.0" top="15.0" />
+                </VBox.margin>
+                <font>
+                    <Font size="18.0" />
+                </font>
+            </Label>
+            <HBox prefHeight="30.0">
+                <VBox.margin>
+                    <Insets left="15.0" />
+                </VBox.margin>
+                <Label prefWidth="150.0" text="Kostenträger" />
+                <Label text="Label" />
+            </HBox>
+            <HBox prefHeight="30.0">
+                <VBox.margin>
+                    <Insets left="15.0" />
+                </VBox.margin>
+                <Label prefWidth="150.0" text="Label" />
+                <Label text="Label" />
+            </HBox>
+            <HBox prefHeight="30.0">
+                <VBox.margin>
+                    <Insets left="15.0" />
+                </VBox.margin>
+                <Label prefWidth="150.0" text="Label" />
+                <Label text="Label" />
+            </HBox>
+        </VBox>
+    </HBox>
+</HBox>

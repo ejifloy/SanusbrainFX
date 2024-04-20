@@ -21,7 +21,7 @@ public class Model {
     private Model(){
         this.viewFactory = new ViewFactory();
         this.databaseDriver = new DatabaseDriver();
-        this.adminSuccessLoginFlag = false;
+        this.adminSuccessLoginFlag = true;
     }
 
     public static synchronized Model getInstance(){

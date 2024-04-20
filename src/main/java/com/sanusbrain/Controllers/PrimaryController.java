@@ -43,6 +43,7 @@ public class PrimaryController implements Initializable {
                 case DASHBOARD-> primaryBorderPane.setCenter(Model.getInstance().getViewFactory().getDashboardView());
                 case PATIENTS -> primaryBorderPane.setCenter(Model.getInstance().getViewFactory().getPatientsView());
                 case SETTINGS -> primaryBorderPane.setCenter(Model.getInstance().getViewFactory().getSettingsView());
+                case PATIENT -> primaryBorderPane.setCenter(Model.getInstance().getViewFactory().getPatientView());
                 default -> primaryBorderPane.setCenter(Model.getInstance().getViewFactory().getDashboardView());
             }
         });

@@ -10,21 +10,19 @@
 
 <AnchorPane fx:id="settingsView" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
    <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" spacing="10.0">
-      <children>
-         <Label text="Einstellungen">
-            <styleClass>
-               <String fx:value="font-size-title"/>
-               <String fx:value="font-style"/>
-               <String fx:value="label"/>
-            </styleClass>
-            <VBox.margin>
-               <Insets left="20.0" top="10.0"/>
-            </VBox.margin>
-         </Label>
-      </children>
       <stylesheets>
          <URL value="@../css/settings.css"/>
          <URL value="@../css/dark.css"/>
       </stylesheets>
+      <Label text="Einstellungen">
+         <styleClass>
+            <String fx:value="font-size-title"/>
+            <String fx:value="font-style"/>
+            <String fx:value="label"/>
+         </styleClass>
+         <VBox.margin>
+            <Insets left="20.0" top="10.0"/>
+         </VBox.margin>
+      </Label>
    </VBox>
 </AnchorPane>

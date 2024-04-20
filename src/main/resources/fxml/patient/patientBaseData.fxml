@@ -1,0 +1,373 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import io.github.palexdev.materialfx.controls.MFXComboBox?>
+<?import io.github.palexdev.materialfx.controls.MFXDatePicker?>
+<?import io.github.palexdev.materialfx.controls.MFXScrollPane?>
+<?import io.github.palexdev.materialfx.controls.MFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="580.0" prefWidth="1240.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sanusbrain.Controllers.Patient.PatientBaseDataController">
+   <children>
+      <MFXScrollPane fitToWidth="true" hbarPolicy="ALWAYS" layoutX="168.0" layoutY="228.0" thumbColor="#c91111" thumbHoverColor="#4b09d0" vbarPolicy="ALWAYS" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <content>
+            <Accordion pickOnBounds="false">
+               <panes>
+                  <TitledPane fx:id="fxPersonalDataTitledPane" contentDisplay="CENTER" textFill="#586e8b">
+                     <font>
+                        <Font name="Corbel" size="20.0" />
+                     </font>
+                     <content>
+                        <FlowPane alignment="CENTER_LEFT" hgap="15.0" vgap="20.0">
+                           <children>
+                              <MFXTextField floatMode="BORDER" floatingText="Titel" prefHeight="40.0" prefWidth="130.0" />
+                              <MFXTextField floatMode="BORDER" floatingText="Titel" prefHeight="40.0" prefWidth="130.0" />
+                              <MFXTextField floatMode="BORDER" floatingText="Titel" prefHeight="40.0" prefWidth="130.0" />
+                              <MFXDatePicker floatMode="BORDER" floatingText="Geburtstag" prefHeight="40.0" prefWidth="130.0" />
+                              <MFXComboBox floatMode="BORDER" floatingText="Geschlecht" />
+                              <MFXTextField floatMode="BORDER" floatingText="Titel" prefHeight="40.0" prefWidth="130.0" />
+                              <MFXComboBox floatMode="BORDER" floatingText="Geschlecht" />
+                              <MFXComboBox floatMode="BORDER" floatingText="Geschlecht" />
+                              <MFXTextField floatMode="BORDER" floatingText="Titel" prefHeight="40.0" prefWidth="130.0" />
+                              <MFXTextField floatMode="BORDER" floatingText="Titel" prefHeight="40.0" prefWidth="130.0" />
+                           </children>
+                        </FlowPane>
+                     </content>
+                     <graphic>
+                        <Label text="Persönliche Daten" textFill="#586e8b">
+                           <font>
+                              <Font name="Corbel" size="20.0" />
+                           </font>
+                        </Label>
+                     </graphic>
+                  </TitledPane>
+                  <TitledPane fx:id="fxPersonalDataTitledPane1" contentDisplay="CENTER" textFill="#586e8b">
+                     <font>
+                        <Font name="Corbel" size="20.0" />
+                     </font>
+                     <content>
+                        <FlowPane hgap="15.0" vgap="20.0">
+                           <children>
+                              <MFXTextField floatMode="BORDER" floatingText="Straße" graphicTextGap="5.0" minHeight="40.0" prefWidth="130.0" />
+                              <MFXTextField floatMode="BORDER" floatingText="PLZ" maxHeight="40.0" minHeight="40.0">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                              </MFXTextField>
+                              <MFXTextField floatMode="BORDER" floatingText="Ort" maxHeight="40.0" minHeight="40.0">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                              </MFXTextField>
+                              <MFXTextField floatMode="BORDER" floatingText="Telefonnummer" maxHeight="40.0" minHeight="40.0">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                              </MFXTextField>
+                              <MFXTextField floatMode="BORDER" floatingText="Mobilnummer" maxHeight="40.0" minHeight="40.0">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                              </MFXTextField>
+                              <MFXTextField floatMode="BORDER" floatingText="E-Mail" maxHeight="40.0" minHeight="40.0">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                              </MFXTextField>
+                           </children>
+                        </FlowPane>
+                     </content>
+                     <graphic>
+                        <Label text="Kontaktdaten" textFill="#586e8b">
+                           <font>
+                              <Font name="Corbel" size="20.0" />
+                           </font>
+                        </Label>
+                     </graphic>
+                  </TitledPane>
+                  <TitledPane expanded="false" textFill="#586e8b">
+                     <font>
+                        <Font name="Corbel" size="20.0" />
+                     </font>
+                     <content>
+                        <HBox alignment="TOP_CENTER">
+                           <children>
+                              <Pane HBox.hgrow="ALWAYS" />
+                              <VBox spacing="10.0" HBox.hgrow="NEVER">
+                                 <children>
+                                    <Label prefHeight="25.0" prefWidth="560.0" text="Problemschilderung (Nachfolgend in Stichpunkten, weshalb eine Behandlung):">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <TextArea fx:id="fxProblem_descriptionTextArea" maxWidth="550.0" minHeight="300.0" prefHeight="300.0" prefWidth="550.0" wrapText="true">
+                                       <VBox.margin>
+                                          <Insets left="10.0" right="10.0" />
+                                       </VBox.margin>
+                                    </TextArea>
+                                    <Pane minHeight="30.0" prefHeight="30.0" prefWidth="570.0">
+                                       <children>
+                                          <Label layoutX="1.0" layoutY="2.0" prefHeight="25.0" prefWidth="278.0" text="Patient/in leidet unter Problem/en seit:">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <DatePicker fx:id="fxOnset_of_illnessDatePicker" layoutX="397.0" minHeight="30.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="30.0" prefWidth="160.0" promptText="Datum" />
+                                       </children>
+                                    </Pane>
+                                    <Pane minHeight="75.0" prefHeight="75.0" prefWidth="570.0">
+                                       <children>
+                                          <Label layoutX="1.0" layoutY="12.0" prefHeight="25.0" prefWidth="570.0" text="Bereits einmal in medizinischer oder psychologischer Behandlung:">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <RadioButton fx:id="fxPretreatment_checkRadioButton" layoutX="10.0" layoutY="38.0" mnemonicParsing="false" text="Ja">
+                                             <toggleGroup>
+                                                <ToggleGroup fx:id="Check_Treatment" />
+                                             </toggleGroup>
+                                          </RadioButton>
+                                          <RadioButton fx:id="fxPretreatment_falseRadioButton" layoutX="71.0" layoutY="38.0" mnemonicParsing="false" text="Nein" toggleGroup="$Check_Treatment" />
+                                       </children>
+                                    </Pane>
+                                    <Pane minHeight="71.0" prefHeight="71.0" prefWidth="567.0">
+                                       <children>
+                                          <TextField fx:id="fxKind_of_treatmentTextField" layoutX="10.0" layoutY="2.0" prefHeight="31.0" prefWidth="328.0" promptText="Art der Behandlung" />
+                                          <TextField fx:id="fxTreatment_periodTextField" layoutX="346.0" layoutY="2.0" prefHeight="31.0" prefWidth="214.0" promptText="Von-Bis" />
+                                          <TextField fx:id="fxTreatment_locationTextField" layoutX="10.0" layoutY="38.0" prefHeight="31.0" prefWidth="550.0" promptText="Behandler/-in, Einrichtung" />
+                                       </children>
+                                    </Pane>
+                                    <Pane minHeight="75.0" prefHeight="90.0" prefWidth="567.0">
+                                       <children>
+                                          <Label layoutX="1.0" layoutY="12.0" prefHeight="25.0" prefWidth="561.0" text="Einnahme von Medikamenten aufgrund psychischer Probleme:">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <RadioButton fx:id="fxMedication_checkRadioButton" layoutX="10.0" layoutY="39.0" mnemonicParsing="false" text="Ja">
+                                             <toggleGroup>
+                                                <ToggleGroup fx:id="Check_Medicine" />
+                                             </toggleGroup>
+                                          </RadioButton>
+                                          <RadioButton fx:id="fxMedication_falseRadioButton" layoutX="71.0" layoutY="38.0" mnemonicParsing="false" text="Nein" toggleGroup="$Check_Medicine" />
+                                       </children>
+                                    </Pane>
+                                    <Pane minHeight="35.0" prefHeight="35.0" prefWidth="567.0">
+                                       <children>
+                                          <TextField fx:id="fxMedicine_A_TextField" layoutX="10.0" layoutY="2.0" prefHeight="31.0" prefWidth="250.0" promptText="Medikament" />
+                                          <TextField fx:id="fxDosage_A_TextField" layoutX="265.0" layoutY="2.0" prefHeight="31.0" prefWidth="145.0" promptText="Dosierung" />
+                                          <DatePicker fx:id="fxMedicine_date_A_DatePicker" layoutX="415.0" layoutY="2.0" minHeight="30.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="30.0" prefWidth="145.0" promptText="Seit" />
+                                       </children>
+                                    </Pane>
+                                    <Pane minHeight="35.0" prefHeight="35.0" prefWidth="567.0">
+                                       <children>
+                                          <TextField fx:id="fxMedicine_B_TextField" layoutX="10.0" layoutY="2.0" prefHeight="31.0" prefWidth="250.0" promptText="Medikament" />
+                                          <TextField fx:id="fxDosage_B_TextField" layoutX="265.0" layoutY="2.0" prefHeight="31.0" prefWidth="145.0" promptText="Dosierung" />
+                                          <DatePicker fx:id="fxMedicine_date_B_DatePicker" layoutX="415.0" layoutY="2.0" minHeight="30.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="30.0" prefWidth="145.0" promptText="Seit" />
+                                       </children>
+                                    </Pane>
+                                    <Pane minHeight="35.0" prefHeight="35.0" prefWidth="567.0">
+                                       <children>
+                                          <TextField fx:id="fxMedicine_C_TextField" layoutX="10.0" layoutY="2.0" prefHeight="31.0" prefWidth="250.0" promptText="Medikament" />
+                                          <TextField fx:id="fxDosage_C_TextField" layoutX="265.0" layoutY="2.0" prefHeight="31.0" prefWidth="145.0" promptText="Dosierung" />
+                                          <DatePicker fx:id="fxMedicine_date_C_DatePicker" layoutX="415.0" layoutY="2.0" minHeight="30.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="30.0" prefWidth="145.0" promptText="Seit" />
+                                       </children>
+                                    </Pane>
+                                    <Pane minHeight="30.0" prefHeight="40.0" prefWidth="567.0">
+                                       <children>
+                                          <Label layoutX="1.0" layoutY="2.0" prefHeight="25.0" prefWidth="129.0" text="Verordnet durch:">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <CheckBox fx:id="fxMedicine_Source_A_CheckBox" layoutX="315.0" layoutY="2.0" mnemonicParsing="false" text="Hausarzt/-ärztin">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </CheckBox>
+                                          <CheckBox fx:id="fxMedicine_Source_B_CheckBox" layoutX="449.0" layoutY="2.0" mnemonicParsing="false" text="Psychiater/-in">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </CheckBox>
+                                       </children>
+                                    </Pane>
+                                    <Pane minHeight="525.0" prefHeight="205.0" prefWidth="567.0">
+                                       <children>
+                                          <Label layoutX="1.0" layoutY="10.0" prefHeight="33.0" prefWidth="370.0" text="Stärke der psychischen Beschwerden / Belastungen:">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="174.0" layoutY="52.0" prefHeight="30.0" prefWidth="57.0" text="Gar nicht" textAlignment="CENTER" wrapText="true">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="259.0" layoutY="52.0" prefHeight="30.0" prefWidth="55.0" text="Schwach" textAlignment="CENTER" wrapText="true">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="352.0" layoutY="52.0" prefHeight="30.0" prefWidth="38.0" text="Mittel" textAlignment="CENTER" wrapText="true">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="438.0" layoutY="52.0" prefHeight="30.0" prefWidth="34.0" text="Stark" textAlignment="CENTER" wrapText="true">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="503.0" layoutY="52.0" prefHeight="30.0" prefWidth="64.0" text="Sehr Stark" textAlignment="CENTER" wrapText="true">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <Slider fx:id="fxOverallSlider" blockIncrement="1.0" layoutX="191.0" layoutY="80.0" majorTickUnit="1.0" max="10.0" minorTickCount="1" prefHeight="50.0" prefWidth="360.0" showTickLabels="true" showTickMarks="true" snapToTicks="true" />
+                                          <Label layoutX="10.0" layoutY="82.0" prefHeight="30.0" prefWidth="150.0" text="Im Allgemeinen" textAlignment="CENTER" wrapText="true">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <Slider fx:id="fxProfessionSlider" blockIncrement="1.0" layoutX="191.0" layoutY="133.0" majorTickUnit="1.0" max="10.0" minorTickCount="1" prefHeight="50.0" prefWidth="360.0" showTickLabels="true" showTickMarks="true" snapToTicks="true" />
+                                          <Label layoutX="10.0" layoutY="133.0" prefHeight="30.0" prefWidth="150.0" text="Ausbildung/Beruf" textAlignment="CENTER" wrapText="true">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <Slider fx:id="fxFamilySlider" blockIncrement="1.0" layoutX="191.0" layoutY="186.0" majorTickUnit="1.0" max="10.0" minorTickCount="1" prefHeight="50.0" prefWidth="360.0" showTickLabels="true" showTickMarks="true" snapToTicks="true" />
+                                          <Label layoutX="10.0" layoutY="186.0" prefHeight="30.0" prefWidth="150.0" text="Familiensituation" textAlignment="CENTER" wrapText="true">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <Slider fx:id="fxRelationSlider" blockIncrement="1.0" layoutX="191.0" layoutY="239.0" majorTickUnit="1.0" max="10.0" minorTickCount="1" prefHeight="50.0" prefWidth="360.0" showTickLabels="true" showTickMarks="true" snapToTicks="true" />
+                                          <Label layoutX="10.0" layoutY="239.0" prefHeight="30.0" prefWidth="150.0" text="Partnerschaft" textAlignment="CENTER" wrapText="true">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <Slider fx:id="fxLeisureTimeSlider" blockIncrement="1.0" layoutX="191.0" layoutY="292.0" majorTickUnit="1.0" max="10.0" minorTickCount="1" prefHeight="50.0" prefWidth="360.0" showTickLabels="true" showTickMarks="true" snapToTicks="true" />
+                                          <Label layoutX="10.0" layoutY="292.0" prefHeight="30.0" prefWidth="150.0" text="Freizeit" textAlignment="CENTER" wrapText="true">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <Slider fx:id="fxFinanceSlider" blockIncrement="1.0" layoutX="191.0" layoutY="398.0" majorTickUnit="1.0" max="10.0" minorTickCount="1" prefHeight="50.0" prefWidth="360.0" showTickLabels="true" showTickMarks="true" snapToTicks="true" />
+                                          <Label layoutX="10.0" layoutY="345.0" prefHeight="30.0" prefWidth="150.0" text="Körperliche Gesundheit" textAlignment="CENTER" wrapText="true">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <Slider fx:id="fxSocialSlider" blockIncrement="1.0" layoutX="192.0" layoutY="450.0" majorTickUnit="1.0" max="10.0" minorTickCount="1" prefHeight="50.0" prefWidth="360.0" showTickLabels="true" showTickMarks="true" snapToTicks="true" />
+                                          <Label layoutX="10.0" layoutY="398.0" prefHeight="30.0" prefWidth="150.0" text="Finanzielle Situation" textAlignment="CENTER" wrapText="true">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <Slider fx:id="fxPhysicalHealthSlider" blockIncrement="1.0" layoutX="191.0" layoutY="345.0" majorTickUnit="1.0" max="10.0" minorTickCount="1" prefHeight="50.0" prefWidth="360.0" showTickLabels="true" showTickMarks="true" snapToTicks="true" />
+                                          <Label layoutX="11.0" layoutY="450.0" prefHeight="41.0" prefWidth="150.0" text="Kontakt zu anderen Menschen" wrapText="true">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </Pane>
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets left="10.0" right="10.0" />
+                                 </HBox.margin>
+                                 <padding>
+                                    <Insets top="20.0" />
+                                 </padding>
+                              </VBox>
+                              <Pane HBox.hgrow="ALWAYS" />
+                           </children>
+                        </HBox>
+                     </content>
+                     <graphic>
+                        <Label text="Problemschilderung" textFill="#586e8b">
+                           <font>
+                              <Font name="Corbel" size="20.0" />
+                           </font>
+                        </Label>
+                     </graphic>
+                  </TitledPane>
+                  <TitledPane expanded="false" textFill="#586e8b">
+                     <graphic>
+                        <Label text="Ärzte / Krankenversicherung" textFill="#586e8b">
+                           <font>
+                              <Font name="Corbel" size="20.0" />
+                           </font>
+                        </Label>
+                     </graphic>
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                     <content>
+                        <HBox alignment="TOP_CENTER" prefHeight="170.0" prefWidth="838.0">
+                           <children>
+                              <Pane HBox.hgrow="ALWAYS" />
+                              <VBox spacing="10.0" HBox.hgrow="NEVER">
+                                 <children>
+                                    <Label prefHeight="25.0" prefWidth="332.0" text="Krankenversicherung:">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <ComboBox fx:id="fxHealthInsuranceComboBox" minHeight="30.0" prefHeight="30.0" prefWidth="350.0" promptText="Auswählen" />
+                                    <TextField fx:id="fxInsuranceContactTextField" minHeight="30.0" prefHeight="30.0" prefWidth="338.0" promptText="Ansprechpartner" />
+                                    <TextField fx:id="fxInsurancePhoneTextField" minHeight="30.0" prefHeight="30.0" prefWidth="239.0" promptText="Telefonnr." />
+                                    <TextField fx:id="fxInsuranceEMailTextField" minHeight="30.0" prefHeight="30.0" prefWidth="239.0" promptText="E-Mail" />
+                                    <Pane minHeight="20.0" prefHeight="20.0" prefWidth="350.0" />
+                                    <Label prefHeight="25.0" prefWidth="332.0" text="Hausarzt/-ärztin:">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="fxDoctorNameTextField" minHeight="30.0" prefHeight="30.0" prefWidth="338.0" promptText="Name" />
+                                    <TextField fx:id="fxDoctorPhoneTextField" minHeight="30.0" prefHeight="30.0" prefWidth="338.0" promptText="Telefonnr." />
+                                    <TextField fx:id="fxDoctorEMailTextField" minHeight="30.0" prefHeight="30.0" prefWidth="338.0" promptText="E-Mail Adresse" />
+                                    <TextField fx:id="fxDoctorStreetTextField" minHeight="30.0" prefHeight="30.0" promptText="Straße" />
+                                    <HBox alignment="CENTER_LEFT" minHeight="30.0" prefHeight="30.0" prefWidth="290.0" spacing="10.0">
+                                       <children>
+                                          <TextField fx:id="fxDoctorPostcodeTextField" minHeight="30.0" prefHeight="30.0" promptText="PLZ" HBox.hgrow="ALWAYS" />
+                                          <TextField fx:id="fxDoctorLocationTextField" minHeight="30.0" prefHeight="30.0" promptText="Stadt" HBox.hgrow="ALWAYS" />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets left="10.0" right="10.0" />
+                                 </HBox.margin>
+                                 <padding>
+                                    <Insets bottom="25.0" top="25.0" />
+                                 </padding>
+                              </VBox>
+                              <Pane HBox.hgrow="ALWAYS" />
+                           </children>
+                        </HBox>
+                     </content>
+                  </TitledPane>
+               </panes>
+            </Accordion>
+         </content>
+      </MFXScrollPane>
+   </children>
+</AnchorPane>
