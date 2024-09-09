@@ -1,0 +1,17 @@
+* {
+	-fx-blue: #35AADC;
+	-fx-dark-blue: #125488;
+    -fx-gray-blue: #65768b;
+
+	-fx-red: #E81123;
+	-fx-orange: #FFB608;
+	-fx-yellow: #FBD009;
+	-fx-green: #389B2F;
+
+    -fx-white: #FDFDFD;
+    -fx-light-gray: #EFEFEF;
+	-fx-gray: #D7D7D7;
+    -fx-dark-gray: #A7A7A7;
+
+	-fx-black: #000;
+}

@@ -1,0 +1,309 @@
+* {
+	-fx-blue: #35AADC;
+	-fx-dark-blue: #125488;
+    -fx-gray-blue: #65768b;
+
+	-fx-red: #E81123;
+	-fx-orange: #FFB608;
+	-fx-yellow: #FBD009;
+	-fx-green: #4EB233;
+
+    -fx-white: #FAFAFA;
+    -fx-light-gray: #F0F0F0;
+	-fx-gray: #E0E0E0;
+    -fx-dark-gray: #A7A7A7;
+
+	-fx-black: #333333;
+	-fx-charcoal: #445055;
+	-fx-onyx: #353935;
+}
+
+/*******************************************************************************
+* Anchor-Pane, Border-Pane, Pane...                                            *
+*******************************************************************************/
+
+.logo{
+    -fx-image: url("../images/SANUSBRAIN_BANNER_light.png");
+}
+
+.bg{
+    -fx-background-color: -fx-light-gray;
+}
+
+.container{
+    -fx-background-color: -fx-white;
+}
+
+.cell-container{
+    -fx-border-color: -fx-light-gray;
+}
+
+.cell-container:hover,
+.cell-container:selected{
+    -fx-background-color: -fx-light-gray;
+}
+
+/*******************************************************************************
+* Label, Font, Size                                                            *
+*******************************************************************************/
+
+.font-style-title{
+    -fx-text-fill: -fx-dark-blue;
+}
+
+.font-style-text{
+    -fx-text-fill: -fx-dark-blue;
+}
+
+/*******************************************************************************
+* MFX Text-field, Password-field, TextArea                                     *
+*******************************************************************************/
+
+#custom-text-area,
+#custom-text-field,
+#custom-search-field,
+#custom-password-field,
+#custom-date-picker,
+#custom-combo-box{
+    -fx-background-color: -fx-white;
+    -fx-border-color: -fx-gray;
+}
+
+#custom-text-area .content{
+    -fx-background-color:-fx-white;
+}
+
+#custom-text-area:focus-within,
+#custom-text-field:focus-within,
+#custom-search-field:focus-within,
+#custom-password-field:focus-within,
+#custom-date-picker:focus-within,
+#custom-combo-box:focus-within{
+    -fx-background-color: -fx-white;
+    -fx-border-color: -fx-blue;
+}
+
+#custom-text-field .text-field,
+#custom-search-field .text-field,
+#custom-date-picker .text-field,
+#custom-combo-box .text-field,
+#custom-password-field .text-field{
+    -fx-text-fill: -fx-black;
+    -fx-highlight-fill: -fx-blue;
+}
+
+#custom-text-field .floating-text,
+#custom-search-field .floating-text,
+#custom-date-picker .floating-text,
+#custom-combo-box .floating-text,
+#custom-password-field .floating-text{
+    -fx-text-fill: -fx-gray-blue;
+    -fx-background-color: -fx-white;
+}
+
+#custom-text-field:focus-within .floating-text,
+#custom-search-field:focus-within .floating-text,
+#custom-date-picker:focus-within .floating-text,
+#custom-combo-box:focus-within .floating-text,
+#custom-password-field:focus-within .floating-text{
+    -fx-text-fill: -fx-blue;
+    -fx-background-color: -fx-white;
+}
+
+#custom-date-picker .mfx-font-icon,
+#custom-combo-box .mfx-font-icon,
+#custom-password-field .mfx-font-icon,{
+    -mfx-color: -fx-dark-blue;
+}
+
+#custom-date-picker .mfx-font-icon:hover,
+#custom-combo-box .mfx-font-icon:hover,
+#custom-date-picker:focus-within .mfx-font-icon,
+#custom-combo-box:focus-within .mfx-font-icon,
+#custom-password-field .mfx-font-icon:hover,
+#custom-password-field:focus-within .mfx-font-icon{
+    -mfx-color: -fx-blue;
+}
+
+
+/*******************************************************************************
+* MFX CheckBox                                                                 *
+*******************************************************************************/
+
+#custom-checkbox {
+	-mfx-main: -fx-blue;
+	-fx-text-fill: -fx-dark-blue;
+}
+
+#custom-checkbox .box{
+    -fx-border-color: #65768b64;
+    -fx-background-color: -fx-white;
+}
+
+#custom-checkbox .box .mark {
+	-mfx-color: -fx-white;
+}
+
+#custom-checkbox:selected .box{
+    -fx-border-color: -fx-blue;
+    -fx-background-color: -fx-blue;
+}
+
+#custom-checkbox .mfx-ripple-generator {
+	-mfx-ripple-color: -fx-blue;
+}
+
+
+/*******************************************************************************
+* MFX Button, MFX Toggle, MFX Radio                                            *
+*******************************************************************************/
+
+#custom-rectangle-button,
+#custom-rectangle-add-button{
+    -fx-text-fill: -fx-dark-blue;
+}
+
+#custom-rectangle-button .mfx-font-icon,
+#custom-rectangle-add-button .mfx-font-icon{
+    -mfx-color: -fx-dark-blue;
+}
+
+#custom-rectangle-button:hover,
+#custom-rectangle-button:hover .mfx-font-icon{
+    -fx-background-color: -fx-light-gray;
+    -mfx-color: -fx-blue;
+    -fx-text-fill: -fx-blue;
+}
+
+#custom-rectangle-add-button:hover,
+#custom-rectangle-add-button:hover .mfx-font-icon{
+    -fx-background-color: -fx-light-gray;
+    -mfx-color: -fx-green;
+    -fx-text-fill: -fx-green;
+}
+
+#custom-rectangle-button .mfx-ripple-generator{
+    -mfx-ripple-color: -fx-blue;
+}
+
+#custom-rectangle-add-button .mfx-ripple-generator{
+    -mfx-ripple-color: -fx-green;
+}
+
+#custom-circle-button,
+#custom-circle-delete-button{
+    -fx-text-fill: -fx-dark-blue;
+}
+
+#custom-circle-button .mfx-font-icon,
+#custom-circle-delete-button .mfx-font-icon{
+    -mfx-color: -fx-dark-blue;
+}
+
+#custom-circle-button:hover,
+#custom-circle-button:hover .mfx-font-icon{
+    -fx-background-color: -fx-light-gray;
+    -mfx-color: -fx-blue;
+    -fx-text-fill: -fx-blue;
+}
+
+#custom-circle-delete-button:hover,
+#custom-circle-delete-button:hover .mfx-font-icon{
+    -fx-background-color: -fx-light-gray;
+    -mfx-color: -fx-red;
+    -fx-text-fill: -fx-red;
+}
+
+#custom-circle-button .mfx-ripple-generator{
+    -mfx-ripple-color: -fx-blue;
+}
+
+#custom-circle-delete-button .mfx-ripple-generator{
+    -mfx-ripple-color: -fx-red;
+}
+
+
+#custom-toggle-nav{
+    -fx-border-color: -fx-light-gray;
+}
+
+#custom-toggle-nav .text-field{
+    -fx-text-fill: -fx-dark-blue;
+}
+
+#custom-toggle-nav:hover{
+    -fx-background-color: -fx-light-gray;
+}
+
+#custom-toggle-nav:selected {
+    -fx-border-color: -fx-blue;
+    -fx-background-color: -fx-white;
+}
+
+#custom-toggle-nav:selected .text-field{
+    -fx-text-fill: -fx-blue;
+}
+
+#custom-radio-btn,
+#custom-radio-yes,
+#custom-radio-no{
+	-fx-text-fill: -fx-dark-blue;
+}
+
+#custom-radio-btn {
+	-mfx-main: -fx-blue;
+}
+
+#custom-radio-btn .mfx-ripple-generator {
+	-mfx-ripple-color: -fx-blue;
+}
+
+#custom-radio-yes {
+	-mfx-main: -fx-green;
+}
+
+#custom-radio-yes .mfx-ripple-generator {
+	-mfx-ripple-color: -fx-green;
+}
+
+#custom-radio-no {
+	-mfx-main: -fx-red;
+}
+
+#custom-radio-no .mfx-ripple-generator {
+	-mfx-ripple-color: -fx-red;
+}
+
+/*******************************************************************************
+* Top-bar, Minimize, Close, Theme                                              *
+*******************************************************************************/
+
+#top-bar{
+    -fx-background-color: -fx-gray;
+}
+
+#custom-theme-switch .mfx-font-icon{
+    -mfx-description: "fas-moon";
+    -mfx-color: orange;
+}
+
+#custom-close .mfx-font-icon,
+#custom-minimize .mfx-font-icon,
+#custom-maximize .mfx-font-icon{
+    -mfx-color: -fx-dark-gray;
+}
+
+#custom-theme-switch: hover,
+#custom-theme-switch: focused,
+#custom-minimize: hover,
+#custom-minimize: focused,
+#custom-maximize: hover,
+#custom-maximize: focused{
+    -fx-background-color:#E5E5E5;
+}
+
+#custom-theme-switch: pressed,
+#custom-minimize: pressed,
+#custom-maximize: pressed{
+    -fx-background-color: #D5D5D5;
+}

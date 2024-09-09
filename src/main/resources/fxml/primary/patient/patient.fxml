@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import io.github.palexdev.materialfx.controls.MFXRectangleToggleNode?>
+<?import java.lang.String?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sanusbrain.Controllers.Primary.Patient.PatientController">
+
+    <HBox prefHeight="50.0" AnchorPane.leftAnchor="16.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="15.0">
+        <MFXRectangleToggleNode id="custom-toggle-nav" fx:id="overviewToggle" onAction="#onOverview" prefHeight="50.0" prefWidth="100.0" text="Übersicht">
+         <toggleGroup>
+            <ToggleGroup fx:id="patientMenu" />
+         </toggleGroup></MFXRectangleToggleNode>
+      <MFXRectangleToggleNode id="custom-toggle-nav" fx:id="baseDataToggle" onAction="#onBaseData" prefHeight="50.0" prefWidth="100.0" text="Stammdaten" toggleGroup="$patientMenu" />
+      <MFXRectangleToggleNode id="custom-toggle-nav" fx:id="historyToggle" onAction="#onHistory" prefHeight="50.0" prefWidth="100.0" text="Verlauf" toggleGroup="$patientMenu" />
+    </HBox>
+
+    <BorderPane fx:id="patientBorderPane" layoutX="16.0" layoutY="50.0" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="65.0" />
+
+   <styleClass>
+      <String fx:value="bg" />
+      <String fx:value="radius-corner-right" />
+   </styleClass>
+
+</AnchorPane>

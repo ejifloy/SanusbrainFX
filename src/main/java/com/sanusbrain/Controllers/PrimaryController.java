@@ -1,10 +1,13 @@
 package com.sanusbrain.Controllers;
 
+import com.sanusbrain.Utils.DialogControllerUtil;
+import com.sanusbrain.Utils.WindowUtil;
 import com.sanusbrain.Models.Model;
 import io.github.palexdev.mfxresources.fonts.MFXFontIcon;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
@@ -29,34 +32,33 @@ public class PrimaryController implements Initializable {
     private HBox fxTopBar;
 
     @FXML
+    private Button fxMaximizeButton;
+
+    @FXML
     private MFXFontIcon mfxModeIcon;
 
     @FXML
     private MFXFontIcon mfxWindowIcon;
 
+
+    private WindowUtil windowUtil;
+
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+        // Sets up the dialog controller for the parent component
+        DialogControllerUtil.setupDialogController(parent);
 
         //Adding a Listener to SimpleStringProperty that handles Navigation-Events to switch Views
         Model.getInstance().getViewFactory().getAdminSelectedViewItem().addListener((observable, oldValue, newValue) -> {
             switch (newValue){
-                case DASHBOARD-> primaryBorderPane.setCenter(Model.getInstance().getViewFactory().getDashboardView());
-                case PATIENTS -> primaryBorderPane.setCenter(Model.getInstance().getViewFactory().getPatientsView());
+                case DASHBOARD-> primaryBorderPane.setCenter(Model.getInstance().getViewFactory().getHomeView());
+                case PATIENTS -> primaryBorderPane.setCenter(Model.getInstance().getViewFactory().getPatientListView());
                 case SETTINGS -> primaryBorderPane.setCenter(Model.getInstance().getViewFactory().getSettingsView());
                 case PATIENT -> primaryBorderPane.setCenter(Model.getInstance().getViewFactory().getPatientView());
-                default -> primaryBorderPane.setCenter(Model.getInstance().getViewFactory().getDashboardView());
+                default -> primaryBorderPane.setCenter(Model.getInstance().getViewFactory().getHomeView());
             }
         });
     }
-
-
-
-
-
-
-
-
-
 
 
     /*******************************************************************************
@@ -66,12 +68,12 @@ public class PrimaryController implements Initializable {
     private void switchMode() {
         if (mfxModeIcon.getDescription().equals("fas-sun")) {
             // light-Mode
-            parent.getStylesheets().remove(getClass().getResource("/css/dark.css").toString());
-            parent.getStylesheets().add(getClass().getResource("/css/light.css").toString());
+            parent.getStylesheets().remove(getClass().getResource("/css/theme/dark.css").toString());
+            parent.getStylesheets().add(getClass().getResource("/css/theme/light.css").toString());
         } else {
             // dark-Mode
-            parent.getStylesheets().remove(getClass().getResource("/css/light.css").toString());
-            parent.getStylesheets().add(getClass().getResource("/css/dark.css").toString());
+            parent.getStylesheets().remove(getClass().getResource("/css/theme/light.css").toString());
+            parent.getStylesheets().add(getClass().getResource("/css/theme/dark.css").toString());
         }
     }
 
@@ -82,7 +84,10 @@ public class PrimaryController implements Initializable {
     }
     @FXML
     private void maximizeWindow(ActionEvent actionEvent) {
-        Model.getInstance().getViewFactory().maximizeWindow(((Stage) fxTopBar.getScene().getWindow()));
+        if(windowUtil==null)
+            setWindowUtilUp();
+
+        windowUtil.toggleMaximize();
         mfxWindowIcon.setDescription((mfxWindowIcon.getDescription().equals("fas-window-maximize")) ? "fas-window-restore":"fas-window-maximize");
     }
     @FXML
@@ -102,5 +107,12 @@ public class PrimaryController implements Initializable {
     public void onPressedTopBar(MouseEvent mouseEvent) {
         x = mouseEvent.getX();
         y = mouseEvent.getY();
+    }
+
+    /**
+     * Initializes resizeUtil to enable maximize feature.
+     */
+    public void setWindowUtilUp(){
+        this.windowUtil = new WindowUtil(((Stage) parent.getScene().getWindow()));
     }
 }

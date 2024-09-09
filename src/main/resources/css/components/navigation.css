@@ -1,0 +1,94 @@
+/**************************************************
+ * Navigation
+**************************************************/
+
+.sidebar {
+	-fx-background-color: #125488;
+	-fx-background-radius: 0 0 0 3;
+	-fx-max-width: 60;
+}
+
+.icon{
+    -fx-image: url("../images/SANUSBRAIN_LOGO_dark.png");
+}
+
+
+/**************************************************
+ * MFX-Button, MFX-Toggle-Button
+**************************************************/
+
+#custom-sidebar-toggle-button{
+    -fx-background-color:transparent;
+    -fx-background-radius:10;
+    -fx-background-insets: 4 8;
+    -fx-border-color: transparent;
+    -fx-border-width: 0 0 0 2;
+    -fx-border-radius: 0 5 5 0;
+    -fx-min-height: 50;
+}
+
+#custom-sidebar-button,
+#custom-sidebar-close-button{
+    -fx-min-height:40;
+    -fx-min-width:40;
+    -fx-background-radius:10;
+    -fx-background-color: transparent;
+}
+
+#custom-sidebar-toggle-button .mfx-ripple-generator{
+    -mfx-ripple-color: #35AADC;
+    -mfx-auto-clip: false;
+}
+
+#custom-sidebar-button .mfx-ripple-generator{
+    -mfx-ripple-color: #35AADC;
+}
+
+#custom-sidebar-button .mfx-ripple-generator,
+#custom-sidebar-close-button .mfx-ripple-generator{
+    -mfx-auto-clip:true;
+}
+
+#custom-sidebar-toggle-button .mfx-ripple-generator{
+    -fx-translate-x:-6;
+}
+
+#custom-sidebar-button: hover,
+#custom-sidebar-toggle-button: hover{
+    -fx-background-color: #1254;
+}
+
+#custom-sidebar-toggle-button: selected{
+    -fx-background-color: #1254;
+    -fx-border-width: 0 0 0 2;
+    -fx-border-color: #35aadc;
+}
+
+#custom-sidebar-toggle-button:selected .mfx-ripple-generator {
+	-mfx-paused: true;
+}
+
+#custom-sidebar-close-button: hover,
+#custom-sidebar-close-button: focused{
+    -fx-background-color:#A3111F;
+}
+
+#custom-sidebar-close-button: pressed{
+     -fx-background-color: #F1707A;
+}
+
+/**************************************************
+ * MFX-Font-Icon
+**************************************************/
+
+.mfx-font-icon{
+    -mfx-size: 20;
+    -fx-translate-x: -1;
+    -fx-opacity: 0.75;
+    -mfx-color: #FFF;
+}
+
+#custom-sidebar-button: selected .mfx-font-icon,
+#custom-sidebar-toggle-button: selected .mfx-font-icon {
+	-fx-opacity: 1;
+}

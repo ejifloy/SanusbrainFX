@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import io.github.palexdev.materialfx.controls.MFXButton?>
+<?import io.github.palexdev.materialfx.controls.MFXRectangleToggleNode?>
+<?import io.github.palexdev.mfxresources.fonts.MFXFontIcon?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="TOP_CENTER" prefHeight="300.0" prefWidth="60.0" spacing="1.0" styleClass="sidebar" stylesheets="@../../css/components/navigation.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sanusbrain.Controllers.Primary.NavigationController">
+   <ImageView fitHeight="65.0" fitWidth="54.0" pickOnBounds="true" preserveRatio="true" styleClass="icon">
+      <VBox.margin>
+         <Insets bottom="10.0" top="5.0" />
+      </VBox.margin>
+   </ImageView>
+   <VBox fx:id="navBar" alignment="CENTER" prefWidth="80.0" spacing="1.0" styleClass="navbar" VBox.vgrow="ALWAYS">
+      <MFXRectangleToggleNode id="custom-sidebar-toggle-button" contentDisplay="CENTER" onAction="#onHomeEvent" selected="true">
+         <graphic>
+            <MFXFontIcon color="white" description="fas-house" />
+         </graphic>
+         <toggleGroup>
+            <ToggleGroup fx:id="sidebar" />
+         </toggleGroup>
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+      </MFXRectangleToggleNode>
+      <MFXRectangleToggleNode id="custom-sidebar-toggle-button" contentDisplay="CENTER" onAction="#onPatientsEvent" toggleGroup="$sidebar">
+         <graphic>
+            <MFXFontIcon color="white" description="fas-clipboard-user" />
+         </graphic>
+      </MFXRectangleToggleNode>
+      <MFXRectangleToggleNode id="custom-sidebar-toggle-button" contentDisplay="CENTER" onAction="#onSettingsEvent" toggleGroup="$sidebar">
+         <graphic>
+            <MFXFontIcon color="white" description="fas-gear" />
+         </graphic>
+      </MFXRectangleToggleNode>
+   </VBox>
+   <MFXButton id="custom-sidebar-button" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" onAction="#onLogoutEvent">
+      <graphic>
+         <MFXFontIcon color="white" description="fas-arrow-right-from-bracket" rotate="180.0" />
+      </graphic>
+      <VBox.margin>
+         <Insets bottom="5.0" />
+      </VBox.margin>
+   </MFXButton>
+   <MFXButton id="custom-sidebar-close-button" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" onAction="#onExitEvent">
+      <graphic>
+         <MFXFontIcon color="white" description="fas-xmark" />
+      </graphic>
+      <VBox.margin>
+         <Insets bottom="5.0" />
+      </VBox.margin>
+   </MFXButton>
+</VBox>

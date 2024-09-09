@@ -1,20 +1,12 @@
 package com.sanusbrain;
 
+import com.sanusbrain.Utils.AsyncTaskRunner;
 import com.sanusbrain.Models.Model;
-import com.sanusbrain.Views.ViewFactory;
 import io.github.palexdev.materialfx.theming.MaterialFXStylesheets;
 import io.github.palexdev.materialfx.theming.UserAgentBuilder;
 import javafx.application.Application;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
-import javafx.scene.image.Image;
-import javafx.scene.paint.Color;
 import javafx.stage.Stage;
-import javafx.stage.StageStyle;
-
 import java.io.IOException;
-import java.util.Objects;
 
 public class App extends Application {
 
@@ -28,6 +20,13 @@ public class App extends Application {
                 .build()
                 .setGlobal();
 
+        // Preload Model instance
+        Model.getInstance();
+        // Start preloading views in a separate thread
+        AsyncTaskRunner.runAsync(()->{
+            Model.getInstance().getViewFactory().preloadAllViews();
+            return null;
+        });
         //Use ViewFactory through Model-Singleton-Object and call showLoginWindow-Methode to show Login
         Model.getInstance().getViewFactory().showLoginWindow();
     }

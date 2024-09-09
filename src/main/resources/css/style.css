@@ -1,0 +1,427 @@
+@import '../css/theme/colors.css';
+
+/*******************************************************************************
+* Anchor-Pane, Border-Pane, Pane...                                            *
+*******************************************************************************/
+
+.container{
+    -fx-background-radius: 4;
+    -fx-border-radius: 4;
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.2) , 5 , 0 , 0 , 0 );
+}
+
+.cell-container{
+    -fx-background-color: transparent;
+    -fx-border-width: 0 0 1 0 ;
+}
+
+.radius{
+    -fx-background-radius: 4px;
+}
+
+.radius-half-top{
+    -fx-background-radius: 4px 4px 0px 0px;
+}
+
+.radius-half-right{
+    -fx-background-radius: 0px 4px 4px 0px;
+}
+
+.radius-corner-right{
+    -fx-background-radius: 0px 0px 4px 0px;
+}
+
+/*******************************************************************************
+* Label, Font, Size                                                            *
+*******************************************************************************/
+#custom-initials-label{
+    -fx-text-fill:white;
+    -fx-font-family:"Segoe UI";
+    -fx-background-radius:40;
+}
+
+.font-style-title{
+    -fx-font-family: "Segoe UI Light";
+    -fx-font-size: 20;
+}
+
+.font-style-text{
+    -fx-font-family: "Segoe UI";
+    -fx-font-size: 14;
+}
+
+.font-weight-light{
+    -fx-font-weight:400;
+}
+
+.font-weight-medium{
+    -fx-font-weight:600;
+}
+
+.font-weight-bold{
+    -fx-font-weight:700;
+}
+
+/*******************************************************************************
+* MFX Text-field, Password-field, TextArea                                     *
+*******************************************************************************/
+#custom-text-area,
+#custom-text-field,
+#custom-search-field,
+#custom-password-field,
+#custom-date-picker,
+#custom-combo-box{
+    -fx-min-height: 40;
+    -fx-background-radius: 4px;
+
+    -fx-border-radius: 4px;
+    -fx-border-style: solid;
+
+    -fx-font-size: 13;
+}
+
+#custom-text-area{
+    -fx-border-width: 1px;
+}
+
+#custom-text-area:focus-within{
+    -fx-border-width: 2px;
+}
+
+#custom-text-field .text-field,
+#custom-search-field .text-field,
+#custom-date-picker .text-field,
+#custom-combo-box .text-field,
+#custom-password-field .text-field{
+    -fx-padding: 0 0 0 5;
+}
+
+#custom-text-field:floating .floating-text,
+#custom-search-field:floating .floating-text,
+#custom-date-picker:floating .floating-text,
+#custom-combo-box:floating .floating-text,
+#custom-password-field:floating .floating-text{
+    -fx-font-size: 12;
+    -fx-background-insets: 7 0 0 0;
+    -fx-background-radius: 2;
+    -fx-padding: 0 3 0 3;
+}
+
+#custom-search-field .mfx-font-icon{
+    -fx-translate-x: 5;
+}
+#custom-search-field .floating-text{
+    -fx-translate-x: -20;
+}
+#custom-search-field:floating .floating-text{
+    -fx-translate-x: 10;
+}
+
+/*******************************************************************************
+* MFX CheckBox                                                                 *
+*******************************************************************************/
+
+#custom-checkbox .box{
+    -fx-border-width: 1.2px;
+}
+
+#custom-checkbox .box .mark {
+	-mfx-description: "fas-check";
+	-mfx-size:16px;
+}
+
+#custom-checkbox .mfx-ripple-generator {
+	-fx-opacity: 0.4;
+}
+
+
+/*******************************************************************************
+* MFX Button, MFX Toggle, MFX Radio                                            *
+*******************************************************************************/
+
+#custom-filled-button{
+    -fx-background-color: -fx-dark-blue;
+    -fx-text-fill: -fx-white;
+    -fx-font-size:16;
+}
+
+#custom-filled-button .mfx-ripple-generator {
+    -mfx-ripple-color: #35AADC;
+    -mfx-auto-clip: true;
+}
+
+#custom-link-button{
+    -fx-background-color: transparent;
+    -fx-background-radius: 14px;
+    -fx-border-radius: 14px;
+    -fx-border-color: transparent;
+    -fx-text-fill: -fx-dark-blue;
+}
+
+#custom-link-button:hover,
+#custom-link-button:focused {
+	-fx-border-color: #35aadc;
+	-fx-text-fill: #35aadc;
+}
+
+#custom-link-button .mfx-ripple-generator {
+	-mfx-ripple-color: #35aadc;
+	-mfx-auto-clip: true;
+}
+
+#custom-rectangle-button,
+#custom-rectangle-add-button{
+    -fx-min-height: 60;
+    -fx-min-width: 80;
+    -fx-background-radius:10;
+    -fx-background-color: transparent;
+    -fx-font-family: "Segoe UI";
+    -fx-font-size: 12;
+}
+
+#custom-rectangle-button .mfx-font-icon,
+#custom-rectangle-add-button .mfx-font-icon{
+    -mfx-size: 20;
+}
+
+#custom-rectangle-button .mfx-ripple-generator{
+    -fx-opacity: 0.7;
+    -mfx-auto-clip: true;
+}
+
+#custom-rectangle-add-button .mfx-ripple-generator{
+    -fx-opacity: 0.7;
+    -mfx-auto-clip: true;
+}
+
+
+#custom-circle-button,
+#custom-circle-small-button,
+#custom-circle-delete-button{
+    -fx-min-height:45;
+    -fx-min-width:45;
+    -fx-background-radius:30;
+    -fx-background-color: transparent;
+    -fx-font-family: "Segoe UI";
+    -fx-font-size: 12;
+}
+
+#custom-circle-delete-button .mfx-font-icon,
+#custom-circle-small-button. mfx-font-icon{
+    -mfx-size: 16;
+}
+
+#custom-circle-button .mfx-font-icon{
+    -mfx-size: 24;
+}
+
+#custom-circle-small-button. mfx-font-icon,
+#custom-circle-button .mfx-ripple-generator{
+    -fx-opacity: 0.7;
+    -mfx-auto-clip: true;
+}
+
+#custom-circle-delete-button .mfx-ripple-generator{
+    -fx-opacity: 0.7;
+    -mfx-auto-clip: true;
+}
+
+
+#custom-toggle-nav{
+    -fx-font-family:"Segoe UI Light";
+    -fx-font-size:14;
+
+    -fx-min-width: 200;
+
+    -fx-border-radius: 0;
+    -fx-background-radius: 2;
+
+    -fx-background-color: transparent;
+    -fx-border-width: 0 0 2 0;
+}
+
+#custom-toggle-nav .mfx-ripple-generator{
+    -mfx-ripple-color: -fx-blue;
+    -fx-opacity: 0.75;
+    -mfx-auto-clip: true;
+}
+
+#custom-toggle-button{
+    -mfx-main: -fx-green;
+    -mfx-secondary: -fx-dark-blue;
+}
+
+#custom-toggle-button .mfx-ripple-generator {
+    -mfx-ripple-color: -fx-green;
+}
+
+#custom-toggle-button .mfx-ripple-generator{
+    -mfx-pause: true;
+}
+
+
+#custom-radio-btn,
+#custom-radio-yes,
+#custom-radio-no{
+	-fx-font-family: "Segoe UI";
+	-fx-font-size: 14;
+}
+
+#custom-radio-btn .mfx-ripple-generator {
+	-fx-opacity: 0.5;
+}
+
+
+#custom-radio-yes .mfx-ripple-generator {
+	-fx-opacity: 0.5;
+}
+
+#custom-radio-no .mfx-ripple-generator {
+	-fx-opacity: 0.5;
+}
+
+/*******************************************************************************
+* MFX-Slider                                                                   *
+*******************************************************************************/
+
+#custom-slider{
+    -fx-text-fill: -fx-white;
+}
+
+#custom-slider:range1 .thumb,
+#custom-slider:range1 .track{
+	-mfx-color: -fx-green;
+	-fx-fill: derive(-fx-green, 50%)
+}
+
+
+#custom-slider:range1 .tick-even,
+#custom-slider:range1 .tick-odd,
+#custom-slider:range2 .tick-even,
+#custom-slider:range2 .tick-odd,
+#custom-slider:range3 .tick-even,
+#custom-slider:range3 .tick-odd{
+    -mfx-color: -fx-black;
+}
+
+#custom-slider:range1 .bar {
+	-fx-fill: -fx-green;
+}
+
+#custom-slider:range2 .thumb,
+#custom-slider:range2 .track {
+	-mfx-color: -fx-yellow;
+	-fx-fill: derive(-fx-yellow, 50%)
+}
+
+#custom-slider:range2 .bar {
+	-fx-fill: -fx-yellow;
+}
+
+#custom-slider:range3 .bar,
+#custom-slider:range3 .thumb{
+	-mfx-color: -fx-red;
+	-fx-fill: -fx-red;
+}
+
+#custom-slider:range3 .track {
+	-fx-fill: derive(-fx-red, 50%);
+}
+
+#custom-slider:range1 .thumb-container .thumb-radius,
+#custom-slider:range2 .thumb-container .thumb-radius,
+#custom-slider:range3 .thumb-container .thumb-radius{
+    -mfx-color: transparent;
+}
+
+
+
+#custom-slider:range1 .thumb-container:hover .thumb-radius,
+#custom-slider:range1 .thumb-container:pressed .thumb-radius {
+	-mfx-color: derive(-fx-green, 50%);
+	-fx-opacity: 0.5;
+}
+
+#custom-slider:range2 .thumb-container:hover .thumb-radius,
+#custom-slider:range2 .thumb-container:pressed .thumb-radius {
+	-mfx-color: derive(-fx-yellow, 50%);
+	-fx-opacity: 0.5;
+}
+
+#custom-slider:range3 .thumb-container:hover .thumb-radius,
+#custom-slider:range3 .thumb-container:pressed .thumb-radius {
+	-mfx-color: derive(-fx-red, 50%);
+	-fx-opacity: 0.5;
+}
+
+#custom-slider:range1 .thumb-container .mfx-ripple-generator {
+	-mfx-ripple-color: -fx-green;
+}
+
+#custom-slider:range2 .thumb-container .mfx-ripple-generator {
+	-mfx-ripple-color: -fx-yellow;
+}
+
+#custom-slider:range3 .thumb-container .mfx-ripple-generator {
+	-mfx-ripple-color: -fx-red;
+}
+
+/*******************************************************************************
+* Top-bar, Minimize, Close, Theme                                              *
+*******************************************************************************/
+
+#custom-theme-switch{
+    -fx-background-color:transparent;
+    -fx-background-radius : 0 0 0 0;
+}
+
+#custom-minimize{
+    -fx-background-color: transparent;
+    -fx-background-radius : 0 0 0 0;
+}
+
+#custom-maximize{
+    -fx-background-color: transparent;
+    -fx-background-radius : 0 0 0 0;
+}
+
+#custom-close{
+    -fx-background-color: transparent;
+    -fx-background-radius : 0 4 0 0;
+}
+
+#custom-theme-switch .mfx-font-icon{
+    -mfx-size: 16;
+}
+
+#custom-close .mfx-font-icon{
+    -mfx-description: "fas-xmark";
+    -mfx-size: 16;
+}
+
+#custom-minimize .mfx-font-icon{
+    -mfx-description: "fas-window-minimize";
+    -mfx-size: 14;
+}
+
+#custom-maximize .mfx-font-icon{
+    -mfx-size: 14;
+}
+
+#custom-close: hover,
+#custom-close: focused,
+#custom-close: hover .mfx-font-icon,
+#custom-close: focused .mfx-font-icon{
+    -fx-background-color:#E81123;
+    -mfx-color: #fff;
+}
+
+#custom-close: pressed{
+    -fx-background-color: #F1707A;
+}
+
+.error-icon{
+    -mfx-description: "fas-triangle-exclamation";
+    -mfx-color: #D34336;
+    -mfx-size: 1em;
+}

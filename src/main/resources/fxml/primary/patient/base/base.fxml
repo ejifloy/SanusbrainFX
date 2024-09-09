@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sanusbrain.Controllers.Primary.Patient.Base.BaseController">
+   <BorderPane fx:id="baseBorderPane" styleClass="bg" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="10.0">
+
+      <top>
+         <fx:include source="menu.fxml" BorderPane.alignment="CENTER_LEFT" />
+      </top>
+
+      <left>
+         <fx:include source="navigation.fxml" BorderPane.alignment="CENTER_LEFT" />
+      </left>
+
+   </BorderPane>
+</AnchorPane>

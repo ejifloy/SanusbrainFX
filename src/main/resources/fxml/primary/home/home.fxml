@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import io.github.palexdev.materialfx.controls.MFXScrollPane?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.Pane?>
+
+
+<AnchorPane xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sanusbrain.Controllers.Primary.Home.HomeController">
+   <children>
+      <BorderPane fx:id="dashboardView" prefHeight="1784.0" prefWidth="984.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <center>
+            <MFXScrollPane fx:id="mfxScrollPane" fitToHeight="true" fitToWidth="true" hbarPolicy="NEVER" style="-fx-background-color: transparent;" vbarPolicy="NEVER" BorderPane.alignment="CENTER">
+               <FlowPane alignment="TOP_CENTER" hgap="20.0" style="-fx-background-color: transparent;" vgap="40.0">
+                  <padding>
+                     <Insets top="20.0" />
+                  </padding>
+                  <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="240.0" prefWidth="320.0" style="-fx-background-color: lightblue;" styleClass="radius" />
+                  <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="240.0" prefWidth="320.0" style="-fx-background-color: lightgreen;" styleClass="radius" />
+                  <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="240.0" prefWidth="320.0" style="-fx-background-color: lightyellow;" styleClass="radius" />
+                  <Pane prefHeight="240.0" prefWidth="480.0" style="-fx-background-color: pink;" styleClass="radius" />
+                  <Pane prefHeight="240.0" prefWidth="480.0" style="-fx-background-color: beige;" styleClass="radius" />
+                  <Pane prefHeight="360.0" prefWidth="980.0" style="-fx-background-color: aquamarine;" styleClass="radius" />
+               </FlowPane>
+            </MFXScrollPane>
+         </center>
+         <padding>
+            <Insets bottom="2.0" right="2.0" />
+         </padding>
+      </BorderPane>
+   </children>
+</AnchorPane>

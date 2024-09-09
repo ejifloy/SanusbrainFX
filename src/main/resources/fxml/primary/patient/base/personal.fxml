@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import io.github.palexdev.materialfx.controls.MFXComboBox?>
+<?import io.github.palexdev.materialfx.controls.MFXDatePicker?>
+<?import io.github.palexdev.materialfx.controls.MFXTextField?>
+<?import io.github.palexdev.materialfx.controls.MFXToggleButton?>
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<AnchorPane fx:id="root" styleClass="bg" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sanusbrain.Controllers.Primary.Patient.Base.PersonalDataController">
+   <GridPane vgap="30.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="5.0">
+      <columnConstraints>
+         <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" percentWidth="5.0" />
+         <ColumnConstraints halignment="LEFT" hgrow="ALWAYS" />
+         <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" percentWidth="5.0" />
+      </columnConstraints>
+      <rowConstraints>
+         <RowConstraints />
+         <RowConstraints valignment="TOP" />
+         <RowConstraints valignment="TOP" />
+         <RowConstraints valignment="TOP" />
+      </rowConstraints>
+      <styleClass>
+         <String fx:value="radius" />
+         <String fx:value="container" />
+      </styleClass>
+      <padding>
+         <Insets bottom="15.0" left="20.0" right="15.0" top="30.0" />
+      </padding>
+      <FlowPane hgap="15.0" vgap="15.0" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1">
+         <MFXTextField id="custom-text-field" fx:id="mfxTitle" floatMode="BORDER" floatingText="Titel" />
+         <MFXTextField id="custom-text-field" fx:id="mfxFirstName" floatMode="BORDER" floatingText="Vorname*" prefWidth="150.0" />
+         <MFXTextField id="custom-text-field" fx:id="mfxLastName" floatMode="BORDER" floatingText="Nachname*" prefWidth="150.0" />
+         <MFXDatePicker id="custom-date-picker" fx:id="mfxBirthdate" editable="false" floatMode="BORDER" floatingText="Geburtstag" prefWidth="150.0" />
+         <MFXComboBox id="custom-combo-box" fx:id="mfxGender" floatMode="BORDER" floatingText="Geschlecht">
+            <items>
+               <FXCollections fx:factory="observableArrayList">
+                  <String fx:value="männlich" />
+                  <String fx:value="weiblich" />
+                  <String fx:value="divers" />
+               </FXCollections>
+            </items>
+         </MFXComboBox>
+      </FlowPane>
+      <FlowPane hgap="15.0" vgap="15.0" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.hgrow="ALWAYS" GridPane.rowIndex="2">
+         <MFXTextField id="custom-text-field" fx:id="mfxNationality" floatMode="BORDER" floatingText="Staatsangehörigkeit" prefWidth="150.0" />
+         <MFXComboBox id="custom-combo-box" fx:id="mfxMaritalStatus" floatMode="BORDER" floatingText="Familienstand" prefWidth="180.0">
+            <items>
+               <FXCollections fx:factory="observableArrayList">
+                  <String fx:value="Ledig" />
+                  <String fx:value="Verheiratet" />
+                  <String fx:value="Getrennt lebend" />
+                  <String fx:value="Geschieden" />
+                  <String fx:value="Verwitwet" />
+                  <String fx:value="Partnerschaft" />
+               </FXCollections>
+            </items>
+         </MFXComboBox>
+         <MFXComboBox id="custom-combo-box" fx:id="mfxTraining" floatMode="BORDER" floatingText="Ausbildung" prefWidth="200.0">
+            <items>
+               <FXCollections fx:factory="observableArrayList">
+                  <String fx:value="Kein Schulabschluss" />
+                  <String fx:value="Hauptschulabschluss" />
+                  <String fx:value="Realschulabschluss" />
+                  <String fx:value="Fachabitur" />
+                  <String fx:value="Abitur" />
+                  <String fx:value="Fachhochschul-/Hochschulstudium" />
+               </FXCollections>
+            </items>
+         </MFXComboBox>
+      </FlowPane>
+      <FlowPane hgap="15.0" vgap="15.0" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.hgrow="ALWAYS" GridPane.rowIndex="3">
+         <MFXTextField id="custom-text-field" fx:id="mfxProfession" floatMode="BORDER" floatingText="Beruf" prefWidth="180.0" />
+         <MFXComboBox id="custom-combo-box" fx:id="mfxProfessionStatus" floatMode="BORDER" floatingText="Beruflicher Status" prefWidth="180.0">
+            <items>
+               <FXCollections fx:factory="observableArrayList">
+                  <String fx:value="Vollzeit" />
+                  <String fx:value="Teilzeit" />
+                  <String fx:value="Freiberuflich tätig" />
+                  <String fx:value="In Ausbildung" />
+                  <String fx:value="Arbeitslos/-suchend" />
+                  <String fx:value="In Freiwilligendienst" />
+                  <String fx:value="Hausfrau/-mann" />
+                  <String fx:value="Altersrente/Pension" />
+                  <String fx:value="Erwerbsunfähig" />
+               </FXCollections>
+            </items>
+         </MFXComboBox>
+         <MFXTextField id="custom-text-field" fx:id="mfxCustomerID" floatMode="BORDER" floatingText="Kundennummer*" prefWidth="150.0" />
+         <MFXToggleButton id="custom-toggle-button" fx:id="mfxStatus" contentDisposition="RIGHT" gap="10.0" styleClass="font-style-text" stylesheets="@../../../../css/style.css" text="In Behandlung" />
+      </FlowPane>
+      <Label styleClass="font-style-title" text="Persönliche Daten" GridPane.columnIndex="1" />
+   </GridPane>
+</AnchorPane>

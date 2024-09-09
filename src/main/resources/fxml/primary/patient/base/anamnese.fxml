@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import io.github.palexdev.materialfx.controls.MFXButton?>
+<?import io.github.palexdev.materialfx.controls.MFXComboBox?>
+<?import io.github.palexdev.materialfx.controls.MFXDatePicker?>
+<?import io.github.palexdev.materialfx.controls.MFXRadioButton?>
+<?import io.github.palexdev.materialfx.controls.MFXScrollPane?>
+<?import io.github.palexdev.materialfx.controls.MFXSlider?>
+<?import io.github.palexdev.materialfx.controls.MFXTextField?>
+<?import io.github.palexdev.mfxresources.fonts.MFXFontIcon?>
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<AnchorPane styleClass="bg" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sanusbrain.Controllers.Primary.Patient.Base.AnamneseDataController">
+   <MFXScrollPane fx:id="mfxScrollPane" fitToHeight="true" fitToWidth="true" hbarPolicy="NEVER" thumbColor="#125488" thumbHoverColor="#35aadc" trackColor="#D7D7D7" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="5.0">
+      <styleClass>
+         <String fx:value="container" />
+         <String fx:value="radius" />
+      </styleClass>
+      <GridPane vgap="50.0">
+         <columnConstraints>
+            <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" percentWidth="5.0" />
+            <ColumnConstraints halignment="LEFT" hgrow="ALWAYS" />
+            <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" percentWidth="5.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints />
+            <RowConstraints valignment="TOP" />
+            <RowConstraints valignment="TOP" />
+            <RowConstraints valignment="TOP" />
+            <RowConstraints valignment="TOP" />
+            <RowConstraints valignment="TOP" />
+            <RowConstraints />
+         </rowConstraints>
+         <padding>
+            <Insets bottom="15.0" left="20.0" right="15.0" top="30.0" />
+         </padding>
+         <Label focusTraversable="false" maxWidth="1.7976931348623157E308" styleClass="font-style-title" text="Anamnese" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.hgrow="ALWAYS" />
+         <GridPane vgap="15.0" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1">
+            <columnConstraints>
+               <ColumnConstraints halignment="LEFT" hgrow="ALWAYS" />
+            </columnConstraints>
+            <rowConstraints>
+               <RowConstraints />
+               <RowConstraints minHeight="300.0" vgrow="ALWAYS" />
+               <RowConstraints />
+            </rowConstraints>
+            <HBox alignment="CENTER_LEFT" GridPane.halignment="LEFT" GridPane.hgrow="ALWAYS">
+               <Label focusTraversable="false" maxWidth="1.7976931348623157E308" styleClass="font-style-text" text="Patient/in leidet unter Problem/en:" HBox.hgrow="ALWAYS" />
+               <MFXComboBox id="custom-combo-box" fx:id="mfxComplaints" floatMode="BORDER" floatingText="Beschwerde/n" maxWidth="1.7976931348623157E308" HBox.hgrow="ALWAYS">
+                  <items>
+                     <FXCollections fx:factory="observableArrayList">
+                        <String fx:value="Depression" />
+                        <String fx:value="Angststörungen" />
+                        <String fx:value="Bipolare Störung" />
+                        <String fx:value="Schizophrenie" />
+                        <String fx:value="Borderline-Persönlichkeitsstörung" />
+                        <String fx:value="Posttraumatische Belastungsstörung (PTBS)" />
+                        <String fx:value="Obsessive-Compulsive Disorder (OCD)" />
+                        <String fx:value="Essstörungen" />
+                        <String fx:value="Aufmerksamkeitsdefizit-/Hyperaktivitätsstörung (ADHS/ADD)" />
+                        <String fx:value="Suchterkrankungen" />
+                        <String fx:value="Panikstörung" />
+                        <String fx:value="Generalisierte Angststörung" />
+                        <String fx:value="Soziale Angststörung" />
+                        <String fx:value="Schlafstörungen" />
+                        <String fx:value="Somatoforme Störungen" />
+                        <String fx:value="Persönlichkeitsstörungen" />
+                        <String fx:value="Anpassungsstörungen" />
+                        <String fx:value="Burnout-Syndrom" />
+                        <String fx:value="Trauerreaktion" />
+                        <String fx:value="Manische Episoden" />
+                     </FXCollections>
+                  </items>
+               </MFXComboBox>
+            </HBox>
+            <TextArea id="custom-text-area" fx:id="mfxDescription" minHeight="300.0" promptText="Problemschilderung" wrapText="true" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1">
+               <padding>
+                  <Insets left="5.0" top="10.0" />
+               </padding>
+            </TextArea>
+            <HBox alignment="CENTER_LEFT" prefHeight="40.0" prefWidth="778.0" GridPane.halignment="LEFT" GridPane.hgrow="ALWAYS" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+               <Label focusTraversable="false" maxWidth="1.7976931348623157E308" styleClass="font-style-text" text="Patient/in leidet unter Problem/en seit:" HBox.hgrow="ALWAYS" />
+               <MFXDatePicker id="custom-date-picker" fx:id="mfxBeginDate" editable="false" floatMode="BORDER" floatingText="Datum" prefWidth="150.0" />
+            </HBox>
+         </GridPane>
+         <GridPane vgap="10.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+            <columnConstraints>
+               <ColumnConstraints halignment="LEFT" hgrow="ALWAYS" />
+            </columnConstraints>
+            <rowConstraints>
+               <RowConstraints minHeight="10.0" prefHeight="30.0" />
+               <RowConstraints />
+               <RowConstraints />
+               <RowConstraints />
+               <RowConstraints valignment="CENTER" />
+            </rowConstraints>
+            <HBox alignment="CENTER_LEFT" spacing="15.0" GridPane.halignment="LEFT" GridPane.hgrow="ALWAYS" GridPane.valignment="CENTER">
+               <Label focusTraversable="false" maxWidth="1.7976931348623157E308" styleClass="font-style-text" text="Bereits einmal in medizinischer oder psychologischer Behandlung:" HBox.hgrow="ALWAYS" />
+               <MFXRadioButton id="custom-radio-yes" fx:id="mfxMedicalYes" text="Ja" HBox.hgrow="ALWAYS">
+                  <HBox.margin>
+                     <Insets />
+                  </HBox.margin>
+                  <toggleGroup>
+                     <ToggleGroup fx:id="mfxCheckTreatment" />
+                  </toggleGroup>
+               </MFXRadioButton>
+               <MFXRadioButton id="custom-radio-no" fx:id="mfxMedicalNo" text="Nein" toggleGroup="$mfxCheckTreatment" HBox.hgrow="ALWAYS">
+                  <padding>
+                     <Insets right="5.0" />
+                  </padding>
+               </MFXRadioButton>
+            </HBox>
+            <HBox spacing="15.0" GridPane.halignment="LEFT" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+               <MFXComboBox id="custom-combo-box" fx:id="mfxTreatment" floatMode="BORDER" floatingText="Art der Behandlung" maxWidth="1.7976931348623157E308" HBox.hgrow="ALWAYS">
+                  <items>
+                     <FXCollections fx:factory="observableArrayList">
+                        <String fx:value="Kognitive Verhaltenstherapie (KVT)" />
+                        <String fx:value="Psychoanalyse" />
+                        <String fx:value="Tiefenpsychologisch fundierte Psychotherapie (TP)" />
+                        <String fx:value="Gesprächstherapie" />
+                        <String fx:value="Systemische Therapie" />
+                        <String fx:value="Verhaltenstherapie" />
+                        <String fx:value="Psychodynamische Therapie" />
+                        <String fx:value="Humanistische Therapie" />
+                        <String fx:value="Integrative Therapie" />
+                        <String fx:value="EMDR (Eye Movement Desensitization and Reprocessing)" />
+                        <String fx:value="Gestalttherapie" />
+                        <String fx:value="Schematherapie" />
+                        <String fx:value="Lösungsorientierte Therapie" />
+                        <String fx:value="Akzeptanz- und Commitment-Therapie (ACT)" />
+                        <String fx:value="Dialektisch-Behaviorale Therapie (DBT)" />
+                        <String fx:value="Psychodrama" />
+                        <String fx:value="Transaktionsanalyse (TA)" />
+                        <String fx:value="Hypnotherapie" />
+                        <String fx:value="Neurolinguistisches Programmieren (NLP)" />
+                        <String fx:value="Emotionsfokussierte Therapie (EFT)" />
+                     </FXCollections>
+                  </items>
+               </MFXComboBox>
+               <MFXDatePicker id="custom-date-picker" fx:id="mfxTreatmentFrom" editable="false" floatMode="BORDER" floatingText="Von" prefWidth="150.0" />
+               <MFXDatePicker id="custom-date-picker" fx:id="mfxTreatmentTill" editable="false" floatMode="BORDER" floatingText="Bis" prefWidth="150.0" />
+            </HBox>
+            <MFXTextField id="custom-text-field" fx:id="mfxTreatmentDescription" floatMode="BORDER" floatingText="Behandler/-in, Einrichtung" maxWidth="1.7976931348623157E308" GridPane.halignment="LEFT" GridPane.hgrow="ALWAYS" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets top="5.0" />
+               </GridPane.margin>
+            </MFXTextField>
+            <HBox alignment="CENTER_LEFT" spacing="15.0" GridPane.halignment="LEFT" GridPane.hgrow="ALWAYS" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+               <Label focusTraversable="false" maxWidth="1.7976931348623157E308" styleClass="font-style-text" text="Verordnet durch:" HBox.hgrow="ALWAYS">
+                  <padding>
+                     <Insets left="5.0" />
+                  </padding>
+               </Label>
+               <MFXRadioButton id="custom-radio-btn" fx:id="mfxFamilyDoctorYes" text="Hausarzt" textFill="#0c99a6">
+                  <HBox.margin>
+                     <Insets />
+                  </HBox.margin>
+                  <toggleGroup>
+                     <ToggleGroup fx:id="mfxCheckDoctor" />
+                  </toggleGroup>
+               </MFXRadioButton>
+               <MFXRadioButton id="custom-radio-btn" fx:id="mfxPsychiatristYes" text="Psychiater" toggleGroup="$mfxCheckDoctor">
+                  <padding>
+                     <Insets right="5.0" />
+                  </padding>
+               </MFXRadioButton>
+            </HBox>
+            <MFXButton id="custom-circle-button" fx:id="mfxAddTreatment" contentDisplay="GRAPHIC_ONLY" depthLevel="LEVEL0" maxWidth="1.7976931348623157E308" onAction="#onAddTreatmentSection" rippleColor="#37addb80" GridPane.rowIndex="4">
+               <graphic>
+                  <MFXFontIcon id="custom-font-icon" color="#125488" description="fas-circle-plus" size="24" />
+               </graphic>
+            </MFXButton>
+         </GridPane>
+         <HBox alignment="CENTER_LEFT" spacing="15.0" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.hgrow="ALWAYS" GridPane.rowIndex="4" GridPane.valignment="CENTER">
+            <Label focusTraversable="false" maxWidth="1.7976931348623157E308" styleClass="font-style-text" text="Bereits einmal in medizinischer oder psychologischer Behandlung:" HBox.hgrow="ALWAYS" />
+            <MFXRadioButton id="custom-radio-yes" fx:id="mfxTreatmentYes" text="Ja" HBox.hgrow="ALWAYS">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+               <toggleGroup>
+                  <ToggleGroup fx:id="mfxCheckMedical" />
+               </toggleGroup>
+            </MFXRadioButton>
+            <MFXRadioButton id="custom-radio-no" fx:id="mfxTreatmentNo" text="Nein" toggleGroup="$mfxCheckMedical" HBox.hgrow="ALWAYS">
+               <padding>
+                  <Insets right="5.0" />
+               </padding>
+            </MFXRadioButton>
+         </HBox>
+         <GridPane vgap="10.0" GridPane.columnIndex="1" GridPane.rowIndex="5">
+            <columnConstraints>
+               <ColumnConstraints halignment="LEFT" hgrow="ALWAYS" />
+            </columnConstraints>
+            <rowConstraints>
+               <RowConstraints />
+               <RowConstraints />
+            </rowConstraints>
+            <HBox spacing="15.0" GridPane.halignment="LEFT" GridPane.hgrow="ALWAYS">
+               <MFXTextField id="custom-text-field" fx:id="mfxMedicalDescription" floatMode="BORDER" floatingText="Medikament" maxWidth="1.7976931348623157E308" HBox.hgrow="ALWAYS" />
+               <MFXTextField id="custom-text-field" fx:id="mfxMedicalDosage" floatMode="BORDER" floatingText="Dosierung" minWidth="-Infinity" prefWidth="170.0" />
+               <MFXDatePicker id="custom-date-picker" fx:id="mfxMedicalDate" editable="false" floatMode="BORDER" floatingText="Seit" prefWidth="150.0" />
+            </HBox>
+            <MFXButton id="custom-circle-button" fx:id="mfxAddMedical" contentDisplay="GRAPHIC_ONLY" depthLevel="LEVEL0" maxWidth="1.7976931348623157E308" onAction="#onAddMedicalSection" rippleColor="#37addb80" GridPane.rowIndex="1">
+               <graphic>
+                  <MFXFontIcon id="custom-font-icon" color="#125488" description="fas-circle-plus" size="24" />
+               </graphic>
+            </MFXButton>
+         </GridPane>
+         <GridPane vgap="10.0" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.hgrow="ALWAYS" GridPane.rowIndex="6">
+            <columnConstraints>
+               <ColumnConstraints halignment="LEFT" hgrow="ALWAYS" />
+            </columnConstraints>
+            <rowConstraints>
+               <RowConstraints />
+               <RowConstraints />
+               <RowConstraints />
+               <RowConstraints />
+               <RowConstraints />
+               <RowConstraints />
+               <RowConstraints />
+               <RowConstraints />
+               <RowConstraints />
+            </rowConstraints>
+            <Label focusTraversable="false" styleClass="font-style-text" text="Stärke der psychischen Beschwerden / Belastungen:">
+               <padding>
+                  <Insets bottom="15.0" />
+               </padding>
+            </Label>
+            <HBox spacing="30.0" GridPane.halignment="LEFT" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets left="10.0" />
+               </GridPane.margin>
+               <Label focusTraversable="false" maxHeight="1.7976931348623157E308" maxWidth="150.0" minWidth="100.0" prefWidth="100.0" styleClass="font-style-text" text="Allgemein" textAlignment="CENTER" wrapText="true" HBox.hgrow="ALWAYS">
+                  <HBox.margin>
+                     <Insets />
+                  </HBox.margin>
+               </Label>
+               <MFXSlider id="custom-slider" fx:id="mfxSliderOverall" alternativeUnitIncrement="0.5" decimalPrecision="1" max="10.0" minWidth="300.0" minorTicksCount="10" showMajorTicks="true" showMinorTicks="true" tickUnit="1.0" unitIncrement="0.5">
+                  <HBox.margin>
+                     <Insets top="15.0" />
+                  </HBox.margin>
+               </MFXSlider>
+               <MFXTextField id="custom-text-field" fx:id="mfxOverallDescription" alignment="TOP_LEFT" floatMode="BORDER" floatingText="Bemerkung" maxWidth="1.7976931348623157E308" HBox.hgrow="ALWAYS" />
+            </HBox>
+            <HBox spacing="30.0" GridPane.halignment="LEFT" GridPane.hgrow="ALWAYS" GridPane.rowIndex="2">
+               <Label focusTraversable="false" maxHeight="1.7976931348623157E308" maxWidth="150.0" minWidth="100.0" prefWidth="100.0" styleClass="font-style-text" text="Beruf" textAlignment="CENTER" wrapText="true" HBox.hgrow="ALWAYS">
+                  <HBox.margin>
+                     <Insets left="10.0" />
+                  </HBox.margin>
+               </Label>
+               <MFXSlider id="custom-slider" fx:id="mfxSliderProfession" alternativeUnitIncrement="0.5" decimalPrecision="1" max="10.0" minWidth="300.0" minorTicksCount="10" showMajorTicks="true" showMinorTicks="true" tickUnit="1.0" unitIncrement="0.5">
+                  <HBox.margin>
+                     <Insets top="15.0" />
+                  </HBox.margin>
+               </MFXSlider>
+               <MFXTextField id="custom-text-field" fx:id="mfxProfessionDescription" alignment="TOP_LEFT" floatMode="BORDER" floatingText="Bemerkung" maxWidth="1.7976931348623157E308" minWidth="-Infinity" HBox.hgrow="ALWAYS" />
+            </HBox>
+            <HBox spacing="30.0" GridPane.halignment="LEFT" GridPane.hgrow="ALWAYS" GridPane.rowIndex="3">
+               <Label focusTraversable="false" maxHeight="1.7976931348623157E308" maxWidth="150.0" minWidth="100.0" prefWidth="100.0" styleClass="font-style-text" text="Familie" textAlignment="CENTER" wrapText="true" HBox.hgrow="ALWAYS">
+                  <HBox.margin>
+                     <Insets left="10.0" />
+                  </HBox.margin>
+               </Label>
+               <MFXSlider id="custom-slider" fx:id="mfxSliderFamily" alternativeUnitIncrement="0.5" decimalPrecision="1" max="10.0" minWidth="300.0" minorTicksCount="10" showMajorTicks="true" showMinorTicks="true" tickUnit="1.0" unitIncrement="0.5">
+                  <HBox.margin>
+                     <Insets top="15.0" />
+                  </HBox.margin>
+               </MFXSlider>
+               <MFXTextField id="custom-text-field" fx:id="mfxFamilyDescription" alignment="TOP_LEFT" floatMode="BORDER" floatingText="Bemerkung" maxWidth="1.7976931348623157E308" minWidth="-Infinity" HBox.hgrow="ALWAYS" />
+            </HBox>
+            <HBox spacing="30.0" GridPane.halignment="LEFT" GridPane.hgrow="ALWAYS" GridPane.rowIndex="4">
+               <Label focusTraversable="false" maxHeight="1.7976931348623157E308" maxWidth="150.0" minWidth="100.0" prefWidth="100.0" styleClass="font-style-text" text="Partnerschaft" textAlignment="CENTER" wrapText="true" HBox.hgrow="ALWAYS">
+                  <HBox.margin>
+                     <Insets left="10.0" />
+                  </HBox.margin>
+               </Label>
+               <MFXSlider id="custom-slider" fx:id="mfxSliderRelation" alternativeUnitIncrement="0.5" decimalPrecision="1" max="10.0" minWidth="300.0" minorTicksCount="10" showMajorTicks="true" showMinorTicks="true" tickUnit="1.0" unitIncrement="0.5">
+                  <HBox.margin>
+                     <Insets top="15.0" />
+                  </HBox.margin>
+               </MFXSlider>
+               <MFXTextField id="custom-text-field" fx:id="mfxRelationDescription" alignment="TOP_LEFT" floatMode="BORDER" floatingText="Bemerkung" maxWidth="1.7976931348623157E308" minWidth="-Infinity" HBox.hgrow="ALWAYS" />
+            </HBox>
+            <HBox spacing="30.0" GridPane.halignment="LEFT" GridPane.hgrow="ALWAYS" GridPane.rowIndex="5">
+               <Label focusTraversable="false" maxHeight="1.7976931348623157E308" maxWidth="150.0" minWidth="100.0" prefWidth="100.0" styleClass="font-style-text" text="Freizeit" textAlignment="CENTER" wrapText="true" HBox.hgrow="ALWAYS">
+                  <HBox.margin>
+                     <Insets left="10.0" />
+                  </HBox.margin>
+               </Label>
+               <MFXSlider id="custom-slider" fx:id="mfxSliderLeisure" alternativeUnitIncrement="0.5" decimalPrecision="1" max="10.0" minWidth="300.0" minorTicksCount="10" showMajorTicks="true" showMinorTicks="true" tickUnit="1.0" unitIncrement="0.5">
+                  <HBox.margin>
+                     <Insets top="15.0" />
+                  </HBox.margin>
+               </MFXSlider>
+               <MFXTextField id="custom-text-field" fx:id="mfxLeisureDescription" alignment="TOP_LEFT" floatMode="BORDER" floatingText="Bemerkung" maxWidth="1.7976931348623157E308" minWidth="-Infinity" HBox.hgrow="ALWAYS" />
+            </HBox>
+            <HBox spacing="30.0" GridPane.halignment="LEFT" GridPane.hgrow="ALWAYS" GridPane.rowIndex="6">
+               <GridPane.margin>
+                  <Insets left="10.0" />
+               </GridPane.margin>
+               <Label focusTraversable="false" maxHeight="1.7976931348623157E308" maxWidth="150.0" minWidth="100.0" prefWidth="100.0" styleClass="font-style-text" text="Körperlich" textAlignment="CENTER" wrapText="true" HBox.hgrow="ALWAYS">
+                  <HBox.margin>
+                     <Insets />
+                  </HBox.margin>
+               </Label>
+               <MFXSlider id="custom-slider" fx:id="mfxSliderPhysical" alternativeUnitIncrement="0.5" decimalPrecision="1" max="10.0" minWidth="300.0" minorTicksCount="10" showMajorTicks="true" showMinorTicks="true" tickUnit="1.0" unitIncrement="0.5">
+                  <HBox.margin>
+                     <Insets top="15.0" />
+                  </HBox.margin>
+               </MFXSlider>
+               <MFXTextField id="custom-text-field" fx:id="mfxPhysicalDescription" alignment="TOP_LEFT" floatMode="BORDER" floatingText="Bemerkung" maxWidth="1.7976931348623157E308" HBox.hgrow="ALWAYS" />
+            </HBox>
+            <HBox spacing="30.0" GridPane.halignment="LEFT" GridPane.hgrow="ALWAYS" GridPane.rowIndex="7">
+               <Label focusTraversable="false" maxHeight="1.7976931348623157E308" maxWidth="150.0" minWidth="100.0" prefWidth="100.0" styleClass="font-style-text" text="Finanziell" textAlignment="CENTER" wrapText="true" HBox.hgrow="ALWAYS">
+                  <HBox.margin>
+                     <Insets left="10.0" />
+                  </HBox.margin>
+               </Label>
+               <MFXSlider id="custom-slider" fx:id="mfxSliderFinancial" alternativeUnitIncrement="0.5" decimalPrecision="1" max="10.0" minWidth="300.0" minorTicksCount="10" showMajorTicks="true" showMinorTicks="true" tickUnit="1.0" unitIncrement="0.5">
+                  <HBox.margin>
+                     <Insets top="15.0" />
+                  </HBox.margin>
+               </MFXSlider>
+               <MFXTextField id="custom-text-field" fx:id="mfxFinancialDescription" alignment="TOP_LEFT" floatMode="BORDER" floatingText="Bemerkung" maxWidth="1.7976931348623157E308" minWidth="-Infinity" HBox.hgrow="ALWAYS" />
+            </HBox>
+            <HBox spacing="30.0" GridPane.halignment="LEFT" GridPane.hgrow="ALWAYS" GridPane.rowIndex="8">
+               <Label focusTraversable="false" maxHeight="1.7976931348623157E308" maxWidth="150.0" minWidth="100.0" prefWidth="100.0" styleClass="font-style-text" text="Sozialleben" textAlignment="CENTER" wrapText="true" HBox.hgrow="ALWAYS">
+                  <HBox.margin>
+                     <Insets left="10.0" />
+                  </HBox.margin>
+               </Label>
+               <MFXSlider id="custom-slider" fx:id="mfxSliderSocial" alternativeUnitIncrement="0.5" decimalPrecision="1" max="10.0" minWidth="300.0" minorTicksCount="10" showMajorTicks="true" showMinorTicks="true" tickUnit="1.0" unitIncrement="0.5">
+                  <HBox.margin>
+                     <Insets top="15.0" />
+                  </HBox.margin>
+               </MFXSlider>
+               <MFXTextField id="custom-text-field" fx:id="mfxSocialDescription" alignment="TOP_LEFT" floatMode="BORDER" floatingText="Bemerkung" maxWidth="1.7976931348623157E308" minWidth="-Infinity" HBox.hgrow="ALWAYS" />
+            </HBox>
+         </GridPane>
+      </GridPane>
+      <padding>
+         <Insets top="5.0" />
+      </padding>
+   </MFXScrollPane>
+</AnchorPane>
