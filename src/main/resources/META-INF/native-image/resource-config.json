@@ -5,7 +5,13 @@
       "pattern":"\\QMETA-INF/services/java.sql.Driver\\E"
     }, 
     {
+      "pattern":"\\QMETA-INF/services/org.mariadb.jdbc.plugin.Codec\\E"
+    }, 
+    {
       "pattern":"\\Q\\E"
+    }, 
+    {
+      "pattern":"\\Qmariadb.properties\\E"
     }, 
     {
       "pattern":"com/mysql/cj/*"
@@ -17,10 +23,7 @@
   "bundles":[
     {
       "name":"com.mysql.cj.LocalizedErrorMessages",
-      "locales":[
-        "", 
-        "und"
-      ]
+      "locales":["und"]
     }, 
     {
       "name":"com.sun.javafx.tk.quantum.QuantumMessagesBundle",

@@ -1,7 +1,7 @@
 package com.sanusbrain.Controllers;
 
 import com.sanusbrain.Models.Model;
-import com.sanusbrain.Views.AdminViewOptions;
+import com.sanusbrain.Views.Enums.FXML.AdminViewOptions;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;

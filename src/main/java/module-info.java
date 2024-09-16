@@ -4,7 +4,8 @@ module com.sanusbrain {
     requires MaterialFX;
 
     requires java.sql;
-    requires mysql.connector.j;
+    /*requires mysql.connector.j;*/
+    requires org.mariadb.jdbc;
 
     opens com.sanusbrain to javafx.fxml,MaterialFX;
     opens com.sanusbrain.Controllers to MaterialFX, javafx.fxml;

@@ -22,11 +22,13 @@ public class App extends Application {
 
         // Preload Model instance
         Model.getInstance();
+
         // Start preloading views in a separate thread
         AsyncTaskRunner.runAsync(()->{
             Model.getInstance().getViewFactory().preloadAllViews();
             return null;
         });
+
         //Use ViewFactory through Model-Singleton-Object and call showLoginWindow-Methode to show Login
         Model.getInstance().getViewFactory().showLoginWindow();
     }

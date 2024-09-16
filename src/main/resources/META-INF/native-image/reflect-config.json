@@ -982,6 +982,20 @@
   "queriedMethods":[{"name":"<init>","parameterTypes":["sun.security.x509.X500Name"] }]
 },
 {
+  "name":"org.mariadb.jdbc.Configuration",
+  "allDeclaredFields":true
+},
+{
+  "name":"org.mariadb.jdbc.Configuration$Builder",
+  "fields":[
+    {"name":"password"}, 
+    {"name":"user"}
+  ]
+},
+{
+  "name":"org.mariadb.jdbc.Driver"
+},
+{
   "name":"sun.misc.Unsafe",
   "fields":[{"name":"theUnsafe"}]
 },

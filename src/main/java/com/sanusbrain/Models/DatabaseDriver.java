@@ -12,23 +12,18 @@ import java.util.stream.Collectors;
 
 public class DatabaseDriver {
     private Connection connection;
-    private static final String URL = "jdbc:mysql://localhost:3306/test";
+    private static final String URL = "jdbc:mariadb://localhost:3306/sanusbrain";
     private static final String USER = "root";
     private static final String PASSWORD = "pw123456";
 
     // Constructor
     public DatabaseDriver() {
-        try {
-            Class.forName("com.mysql.cj.jdbc.Driver");
-            Connection connection = DriverManager.getConnection(URL, USER, PASSWORD);
-        } catch (ClassNotFoundException | SQLException e) {
-            System.out.println("Connection failed: " + e.getMessage());
-        }
+
     }
 
     // Get a new connection for each operation
     private Connection getConnection() throws SQLException {
-        return DriverManager.getConnection("jdbc:mysql://localhost:3306/sanusbrain", "root", "pw123456");
+        return DriverManager.getConnection(URL,USER,PASSWORD);
     }
 
     public List<Map<String, Object>> getLoginData(String username, String password) {

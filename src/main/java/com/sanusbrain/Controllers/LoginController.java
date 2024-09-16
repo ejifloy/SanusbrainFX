@@ -1,6 +1,7 @@
 package com.sanusbrain.Controllers;
 
 import com.sanusbrain.Models.Model;
+import com.sanusbrain.Utils.DialogControllerUtil;
 import io.github.palexdev.materialfx.controls.MFXPasswordField;
 import io.github.palexdev.materialfx.controls.MFXTextField;
 import io.github.palexdev.materialfx.validation.Constraint;
@@ -46,6 +47,8 @@ public class LoginController implements Initializable {
         //Apply Validator Feature to User-/PasswordTextField
         // applyValidation(fxUsernameTextField,"Benutzername ungültig...                  ", "admin", userValidationLabel);
         // applyValidation(fxPasswordField,"Passwort ist ungültig...                  ", "pw123456", passwordValidationLabel);
+        // Sets up the dialog controller for the parent component
+        // DialogControllerUtil.setupDialogController(parent);
     }
 
 
